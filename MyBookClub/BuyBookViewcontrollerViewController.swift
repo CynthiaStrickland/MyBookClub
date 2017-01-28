@@ -8,14 +8,16 @@
 
 import UIKit
 
-class BuyBookViewcontrollerViewController: UIViewController {
+class BuyBookViewcontrollerViewController: UIViewController, UIWebViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let url = URL (string: "http://www.amazon.com");
-        let requestObj = URLRequest(url: url!);
-        webView.loadRequest(requestObj);
+        let request = URLRequest(url: url!);
+        webView.loadRequest(request);
+        webView.delegate = self
+
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
