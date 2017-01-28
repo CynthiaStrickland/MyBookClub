@@ -24,6 +24,8 @@ class AddBookReadViewController: UIViewController, UINavigationControllerDelegat
         let myPickerController = UIImagePickerController()
         myPickerController.delegate = self
         myPickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        myPickerController.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        present(myPickerController, animated: true, completion: nil)
         
         self.present(myPickerController, animated: true, completion: nil)
         
@@ -34,6 +36,10 @@ class AddBookReadViewController: UIViewController, UINavigationControllerDelegat
         bookImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         self.dismiss(animated: true, completion: nil)
         
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.view.endEditing(true)
     }
     
     override func viewDidLoad() {

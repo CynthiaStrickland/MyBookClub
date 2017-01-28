@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D17a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Stu-17-Eic">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D17a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ynd-g5-KwV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -327,7 +327,7 @@
                                             <action selector="saveMemberName:" destination="Yxh-Ng-vPd" eventType="touchUpInside" id="Ebz-GE-B1D"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hummingbird" translatesAutoresizingMaskIntoConstraints="NO" id="gnx-nF-HxT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BookClub80.png" translatesAutoresizingMaskIntoConstraints="NO" id="gnx-nF-HxT">
                                         <rect key="frame" x="21" y="8" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="Xdx-BM-l0B"/>
@@ -445,7 +445,7 @@
                                     <action selector="saveBooksRead:" destination="Rpj-Ea-oZC" eventType="touchUpInside" id="sQV-EP-Kfz"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BookClubAddPhoto120.png" translatesAutoresizingMaskIntoConstraints="NO" id="op4-Be-W21">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BookClub80.png" translatesAutoresizingMaskIntoConstraints="NO" id="op4-Be-W21">
                                 <rect key="frame" x="112" y="316" width="151" height="154"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vff-OA-fhm" userLabel="ImageSelection">
@@ -746,7 +746,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BookClubAddPhoto120.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fcn-bO-41V">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BookClub80.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fcn-bO-41V">
                                         <rect key="frame" x="22" y="26" width="69" height="69"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="69" id="NNN-cz-khV"/>
@@ -955,7 +955,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vo7-SA-KlI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4764" y="1247"/>
+            <point key="canvasLocation" x="4764" y="1246.3268365817091"/>
         </scene>
         <!--Buy Book Viewcontroller View Controller-->
         <scene sceneID="4cp-kX-23C">
@@ -1104,9 +1104,8 @@
     </scenes>
     <resources>
         <image name="BookClub120.png" width="120" height="120"/>
-        <image name="BookClubAddPhoto120.png" width="120" height="120"/>
+        <image name="BookClub80.png" width="80" height="80"/>
         <image name="backgroundImage.png" width="491" height="307"/>
         <image name="home30.png" width="30" height="30"/>
-        <image name="hummingbird" width="621" height="353"/>
     </resources>
 </document>
