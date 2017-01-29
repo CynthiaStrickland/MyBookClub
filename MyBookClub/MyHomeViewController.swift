@@ -9,11 +9,10 @@ import CoreFoundation
 import UIKit
 
 class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate {
-    @IBOutlet weak var tableView: UITableView!
     
-    var bookTitle : String?
-    var author : String?
-    var image : UIImage?
+    var titleOfBook : String?
+    var authorOfBook : String?
+    var bookImage : UIImage?
     var base64String : NSString = ""
     var memberSince : String?
     var memberAboutMe: String?
@@ -32,7 +31,7 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     @IBOutlet weak var saveMemberName: UIButton!
     @IBOutlet weak var memberName: UITextField!
-    @IBOutlet weak var bookReadTV: UITableView!
+    @IBOutlet weak var booksReadTableview: UITableView!
     @IBOutlet weak var profileImage: UIImageView!
     
 
@@ -40,10 +39,6 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         super.viewDidLoad()
 
         customButtons()
-    }
-    
-    func reloadTableData(_ notification: Notification) {
-        tableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -85,20 +80,23 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         }
     }
     
+    @IBAction func saveMemberName(_ sender: UIButton) {
+        // TODO:   SAVE MEMBER NAME
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return booksRead.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "booksread", for: indexPath)
+        let cell:MyHomeTableviewCell = tableView.dequeueReusableCell(withIdentifier: "booksread", for: indexPath) as! MyHomeTableviewCell
         
         let myBooksRead = booksRead[indexPath.row]
         
         cell.textLabel?.text =  myBooksRead.titleOfBook
         cell.detailTextLabel?.text =  myBooksRead.authorOfBook
-        
-        print(booksRead)
+        cell.imageView?.image = myBooksRead.bookImage
         
         return cell
     }
@@ -114,8 +112,16 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
             print("Deleted")
             
             self.booksRead.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+    }
+    
+    @IBAction func logoutButtonPressed(_ sender: UIButton) {
+        
+    }
+
+    @IBAction func shareButtonPressed(_ sender: UIButton) {
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

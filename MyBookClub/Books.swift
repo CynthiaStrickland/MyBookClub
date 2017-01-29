@@ -10,12 +10,16 @@ import UIKit
 
 class Books: NSObject {
     
+    var dictionaryOfBooksRead = [String:String]()
+
     var titleOfBook : String?
     var authorOfBook : String?
+    var bookImage: UIImage?
+
     var dateBookRead : String?
     var bookRating: String?
     var bookSuggestions: String?
-    var bookClubNotes: String?    
+    var bookClubNotes: String?
 }
 
 class Club: NSObject {
@@ -23,4 +27,7 @@ class Club: NSObject {
     var clubImage: UIImage?
     var clubdatetimelocation: String?
     var clubname: String?
+    var clubBooksReadTitle: String?
+    var clubBooksReadAuthor: String?
+    
 }

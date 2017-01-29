@@ -10,12 +10,14 @@ import UIKit
 
 class AddBookReadViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
+    var myBooks = [Books]()
     var dictionaryOfBooksRead = [String:String]()
     
     let buttonBorder = UIColor.white.cgColor
     let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor
 
     @IBOutlet weak var saveBooksRead: UIButton!
+    
     @IBOutlet weak var bookImage: UIImageView!
     @IBOutlet weak var authorOfBook: UITextField?
     @IBOutlet weak var titleOfBook: UITextField?
@@ -68,14 +70,17 @@ class AddBookReadViewController: UIViewController, UINavigationControllerDelegat
         print(dictionaryOfBooksRead)
     }
     
+    
+    // TODO:   Make Tableview reload with new data for Book, Author and Image.
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "addbook")
         {
             
             let add = segue.destination as! MyHomeViewController
-            add.bookTitle = titleOfBook?.text
-            add.author = authorOfBook?.text
-            add.image = bookImage.image
+            add.titleOfBook = titleOfBook?.text
+            add.authorOfBook = authorOfBook?.text
+            add.bookImage = bookImage.image
         }
     }
     

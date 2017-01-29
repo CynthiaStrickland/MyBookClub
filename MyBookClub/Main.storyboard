@@ -309,7 +309,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="logout:" destination="Yxh-Ng-vPd" eventType="touchUpInside" id="kbH-hP-BON"/>
+                                            <action selector="logoutButtonPressed:" destination="Yxh-Ng-vPd" eventType="touchUpInside" id="Le6-3y-8rD"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbs-sx-iOp">
@@ -320,6 +320,9 @@
                                         <state key="normal" title="SHARE">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="shareButtonPressed:" destination="Yxh-Ng-vPd" eventType="touchUpInside" id="NpZ-1Q-nFx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVT-FW-frh">
                                         <rect key="frame" x="21" y="8" width="70" height="70"/>
@@ -348,7 +351,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="saveMemberName:" destination="Yxh-Ng-vPd" eventType="touchUpInside" id="Ebz-GE-B1D"/>
+                                            <action selector="saveMemberName:" destination="Yxh-Ng-vPd" eventType="touchUpInside" id="Fnx-iU-0fE"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BookClub80.png" translatesAutoresizingMaskIntoConstraints="NO" id="gnx-nF-HxT">
@@ -413,12 +416,12 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addButton" destination="9Vp-iN-Vcx" id="Ee0-2g-NVu"/>
-                        <outlet property="bookReadTV" destination="xSg-CI-Dki" id="dCF-76-SmM"/>
+                        <outlet property="booksReadTableview" destination="xSg-CI-Dki" id="Vx8-NE-wu2"/>
                         <outlet property="logout" destination="mQh-5e-ILU" id="p00-7Q-Lx2"/>
                         <outlet property="memberName" destination="mKP-oL-t3k" id="Wl1-lT-u7v"/>
                         <outlet property="profileImage" destination="gnx-nF-HxT" id="HdQ-GF-WPs"/>
                         <outlet property="profilePhotoImageView" destination="gnx-nF-HxT" id="JoZ-Wr-3TB"/>
-                        <outlet property="saveMemberName" destination="PV4-ne-bFi" id="Wkx-PI-7sI"/>
+                        <outlet property="saveMemberName" destination="PV4-ne-bFi" id="Xut-fa-zW5"/>
                         <outlet property="share" destination="Bbs-sx-iOp" id="dl7-W0-Wsx"/>
                     </connections>
                 </viewController>
