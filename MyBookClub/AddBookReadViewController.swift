@@ -8,10 +8,11 @@
 
 import UIKit
 
+var dictionaryOfBooksRead = [String:Any]()
+
 class AddBookReadViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
     var myBooks = [Books]()
-    var dictionaryOfBooksRead = [String:String]()
     
     let buttonBorder = UIColor.white.cgColor
     let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor
@@ -70,6 +71,18 @@ class AddBookReadViewController: UIViewController, UINavigationControllerDelegat
         print(dictionaryOfBooksRead)
     }
     
+//    // MARK: - NSCoding
+//    required init?(coder aDecoder: NSCoder) {
+//        titleOfBook = aDecoder.decodeObject(forKey: Books.titleOfBook.rawValue) as! String
+//        authorOfBook = (aDecoder.decodeObject(forKey: Books.authorOfBook.rawValue) as! NSNumber).intValue
+//        bookImage = aDecoder.decodeObject(forKey: Books.bookImage.rawValue) as? String
+//    }
+//    
+//    override func encode(with aCoder: NSCoder) {
+//        aCoder.encode(titleOfBook, forKey: Books.titleOfBook.rawValue)
+//        aCoder.encode(authorOfBook, forKey: Books.authorOfBook.rawValue)
+//        aCoder.encode(bookImage, forKey: Books.bookImage.rawValue)
+//    }
     
     // TODO:   Make Tableview reload with new data for Book, Author and Image.
     

@@ -37,7 +37,13 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        booksReadTableview.allowsSelectionDuringEditing = true
+        booksReadTableview.estimatedRowHeight = 67.0
+        booksReadTableview.rowHeight = UITableViewAutomaticDimension
+        automaticallyAdjustsScrollViewInsets = true
+        navigationItem.rightBarButtonItem = editButtonItem
+        
         customButtons()
     }
     
@@ -90,14 +96,16 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:MyHomeTableviewCell = tableView.dequeueReusableCell(withIdentifier: "booksread", for: indexPath) as! MyHomeTableviewCell
+        let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "booksread", for: indexPath)
         
         let myBooksRead = booksRead[indexPath.row]
+        
+        if cell is MyHomeTableviewCell {
         
         cell.textLabel?.text =  myBooksRead.titleOfBook
         cell.detailTextLabel?.text =  myBooksRead.authorOfBook
         cell.imageView?.image = myBooksRead.bookImage
-        
+        }
         return cell
     }
     
@@ -108,6 +116,9 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        guard case(.delete) = editingStyle else { return }
+        
         if editingStyle == .delete {
             print("Deleted")
             
@@ -121,8 +132,12 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
 
     @IBAction func shareButtonPressed(_ sender: UIButton) {
-        
-    }
+        let infoToShare = titleOfBook
+        let vc = UIActivityViewController(activityItems: [infoToShare], applicationActivities: nil)
+        vc.popoverPresentationController?.sourceView = self.view
+        vc.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
+        self.present(vc, animated: true, completion: nil)
+        }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return true
