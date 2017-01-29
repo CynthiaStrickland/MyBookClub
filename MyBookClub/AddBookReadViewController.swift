@@ -48,15 +48,6 @@ class AddBookReadViewController: UIViewController, UINavigationControllerDelegat
         customLabels()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return true
-    }
-    
     @IBAction func saveBook(_ sender: UIButton) {
         
         if titleOfBook?.text == "" || authorOfBook?.text == "" {
@@ -71,6 +62,8 @@ class AddBookReadViewController: UIViewController, UINavigationControllerDelegat
             if let bookReadTitleText = titleOfBook?.text, let authorNameText = authorOfBook?.text {
             dictionaryOfBooksRead.updateValue(bookReadTitleText, forKey: authorNameText)
             }
+            self.dismiss(animated: true, completion: {});
+
         }
         print(dictionaryOfBooksRead)
     }
@@ -101,5 +94,14 @@ class AddBookReadViewController: UIViewController, UINavigationControllerDelegat
         saveBooksRead.layer.backgroundColor  = buttonColor
         saveBooksRead.layer.borderWidth = 1
         saveBooksRead.layer.cornerRadius = 10
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
 }

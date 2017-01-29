@@ -38,7 +38,6 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableData(_:)), name: .reload, object: nil)
 
         customButtons()
     }
