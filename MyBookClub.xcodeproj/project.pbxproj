@@ -35,6 +35,7 @@
 		81C6E0431E3D354900EEFF86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C6E0421E3D354900EEFF86 /* Main.storyboard */; };
 		81C6E0481E3D38BA00EEFF86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E0471E3D38BA00EEFF86 /* LoginViewController.swift */; };
 		81C6E04A1E3D38D000EEFF86 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E0491E3D38D000EEFF86 /* PasswordResetViewController.swift */; };
+		81C6E04E1E3D614200EEFF86 /* MyHomeTableviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E04D1E3D614200EEFF86 /* MyHomeTableviewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +57,7 @@
 
 /* Begin PBXFileReference section */
 		81C6DFE71E3D34A400EEFF86 /* MyBookClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBookClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		81C6DFEA1E3D34A400EEFF86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		81C6DFEA1E3D34A400EEFF86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = MyBookClub/AppDelegate.swift; sourceTree = "<group>"; };
 		81C6DFF11E3D34A400EEFF86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MyBookClub/Assets.xcassets; sourceTree = "<group>"; };
 		81C6DFF41E3D34A400EEFF86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81C6DFF61E3D34A400EEFF86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MyBookClub/Info.plist; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 		81C6E0421E3D354900EEFF86 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = MyBookClub/Main.storyboard; sourceTree = "<group>"; };
 		81C6E0471E3D38BA00EEFF86 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		81C6E0491E3D38D000EEFF86 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
+		81C6E04D1E3D614200EEFF86 /* MyHomeTableviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHomeTableviewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,16 +146,16 @@
 			children = (
 				81C6E0471E3D38BA00EEFF86 /* LoginViewController.swift */,
 				81C6E0491E3D38D000EEFF86 /* PasswordResetViewController.swift */,
-				81C6DFEA1E3D34A400EEFF86 /* AppDelegate.swift */,
 				81C6E03E1E3D353400EEFF86 /* AboutViewController.swift */,
 				81C6E03F1E3D353400EEFF86 /* AddBookReadViewController.swift */,
 				81C6E0281E3D352B00EEFF86 /* BookClubMembersViewController.swift */,
-				81C6E0291E3D352B00EEFF86 /* BookClubTableViewCell.swift */,
 				81C6E02A1E3D352B00EEFF86 /* BookClubViewController.swift */,
+				81C6E0291E3D352B00EEFF86 /* BookClubTableViewCell.swift */,
 				81C6E02B1E3D352B00EEFF86 /* BookClubViewController+TableView.swift */,
 				81C6E02D1E3D352B00EEFF86 /* BuyBookViewcontrollerViewController.swift */,
 				81C6E02E1E3D352B00EEFF86 /* CreateBookClub.swift */,
 				81C6E02F1E3D352B00EEFF86 /* MyHomeViewController.swift */,
+				81C6E04D1E3D614200EEFF86 /* MyHomeTableviewCell.swift */,
 				81C6E0301E3D352B00EEFF86 /* SearchClubViewController.swift */,
 				81C6E0321E3D352B00EEFF86 /* UserBookNotes.swift */,
 			);
@@ -182,6 +184,7 @@
 		81C6E0441E3D37C200EEFF86 /* MODALS */ = {
 			isa = PBXGroup;
 			children = (
+				81C6DFEA1E3D34A400EEFF86 /* AppDelegate.swift */,
 				81C6E0311E3D352B00EEFF86 /* User.swift */,
 				81C6E02C1E3D352B00EEFF86 /* Books.swift */,
 			);
@@ -367,6 +370,7 @@
 				81C6E03D1E3D352B00EEFF86 /* UserBookNotes.swift in Sources */,
 				81C6E0361E3D352B00EEFF86 /* BookClubViewController+TableView.swift in Sources */,
 				81C6E0411E3D353400EEFF86 /* AddBookReadViewController.swift in Sources */,
+				81C6E04E1E3D614200EEFF86 /* MyHomeTableviewCell.swift in Sources */,
 				81C6E03B1E3D352B00EEFF86 /* SearchClubViewController.swift in Sources */,
 				81C6E0351E3D352B00EEFF86 /* BookClubViewController.swift in Sources */,
 				81C6E03A1E3D352B00EEFF86 /* MyHomeViewController.swift in Sources */,

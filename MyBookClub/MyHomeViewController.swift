@@ -33,13 +33,18 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     @IBOutlet weak var saveMemberName: UIButton!
     @IBOutlet weak var memberName: UITextField!
     @IBOutlet weak var bookReadTV: UITableView!
-    @IBOutlet weak var booksReadLbl: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableData(_:)), name: .reload, object: nil)
+
         customButtons()
+    }
+    
+    func reloadTableData(_ notification: Notification) {
+        tableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -103,6 +108,15 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         let mainStoryboard : UIStoryboard = UIStoryboard(name: "MyHomeViewController", bundle: nil)
         let homeViewController : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "UserBookNotes")
         self.present(homeViewController, animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("Deleted")
+            
+            self.booksRead.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

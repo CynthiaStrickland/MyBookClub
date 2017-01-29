@@ -10,15 +10,15 @@ import UIKit
 
 class AddBookReadViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
-    var dictionaryOfBooksRead = [Books]()
+    var dictionaryOfBooksRead = [String:String]()
+    
     let buttonBorder = UIColor.white.cgColor
     let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor
 
     @IBOutlet weak var saveBooksRead: UIButton!
     @IBOutlet weak var bookImage: UIImageView!
-    @IBOutlet weak var authorOfBook: UITextField!
-    @IBOutlet weak var titleOfBook: UITextField!
-
+    @IBOutlet weak var authorOfBook: UITextField?
+    @IBOutlet weak var titleOfBook: UITextField?
     
     @IBAction func selectBookCover(_ sender: AnyObject) {
         let myPickerController = UIImagePickerController()
@@ -26,9 +26,7 @@ class AddBookReadViewController: UIViewController, UINavigationControllerDelegat
         myPickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
         myPickerController.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         present(myPickerController, animated: true, completion: nil)
-        
-        self.present(myPickerController, animated: true, completion: nil)
-        
+
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -44,8 +42,8 @@ class AddBookReadViewController: UIViewController, UINavigationControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.authorOfBook.delegate = self
-        self.titleOfBook.delegate = self
+        self.authorOfBook?.delegate = self
+        self.titleOfBook?.delegate = self
 
         customLabels()
     }
@@ -59,26 +57,45 @@ class AddBookReadViewController: UIViewController, UINavigationControllerDelegat
         return true
     }
     
+    @IBAction func saveBook(_ sender: UIButton) {
+        
+        if titleOfBook?.text == "" || authorOfBook?.text == "" {
+            let alertView = UIAlertController(title: "WARNING",
+                                              message: "You must enter the Book Title and the Author's name" as String, preferredStyle:.alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertView.addAction(okAction)
+            
+            self.present(alertView, animated: true, completion: nil)
+        } else {
+        
+            if let bookReadTitleText = titleOfBook?.text, let authorNameText = authorOfBook?.text {
+            dictionaryOfBooksRead.updateValue(bookReadTitleText, forKey: authorNameText)
+            }
+        }
+        print(dictionaryOfBooksRead)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "addbook")
         {
+            
             let add = segue.destination as! MyHomeViewController
-            add.bookTitle = titleOfBook.text
-            add.author = authorOfBook.text
+            add.bookTitle = titleOfBook?.text
+            add.author = authorOfBook?.text
             add.image = bookImage.image
         }
     }
     
     func customLabels() {
-        titleOfBook.layer.borderColor = buttonBorder
-        titleOfBook.layer.backgroundColor  = buttonColor
-        titleOfBook.layer.borderWidth = 1
-        titleOfBook.layer.cornerRadius = 10
+        titleOfBook?.layer.borderColor = buttonBorder
+        titleOfBook?.layer.backgroundColor  = buttonColor
+        titleOfBook?.layer.borderWidth = 1
+        titleOfBook?.layer.cornerRadius = 10
         
-        authorOfBook.layer.borderColor = buttonBorder
-        authorOfBook.layer.backgroundColor  = buttonColor
-        authorOfBook.layer.borderWidth = 1
-        authorOfBook.layer.cornerRadius = 10
+        authorOfBook?.layer.borderColor = buttonBorder
+        authorOfBook?.layer.backgroundColor  = buttonColor
+        authorOfBook?.layer.borderWidth = 1
+        authorOfBook?.layer.cornerRadius = 10
      
         saveBooksRead.layer.borderColor = buttonBorder
         saveBooksRead.layer.backgroundColor  = buttonColor
