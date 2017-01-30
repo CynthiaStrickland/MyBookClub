@@ -100,12 +100,10 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         
         let myBooksRead = booksRead[indexPath.row]
         
-        if cell is MyHomeTableviewCell {
-        
         cell.textLabel?.text =  myBooksRead.titleOfBook
         cell.detailTextLabel?.text =  myBooksRead.authorOfBook
         cell.imageView?.image = myBooksRead.bookImage
-        }
+        
         return cell
     }
     

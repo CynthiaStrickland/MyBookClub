@@ -18,10 +18,15 @@ class AddBookReadViewController: UIViewController, UINavigationControllerDelegat
     let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor
 
     @IBOutlet weak var saveBooksRead: UIButton!
-    
+
     @IBOutlet weak var bookImage: UIImageView!
     @IBOutlet weak var authorOfBook: UITextField?
     @IBOutlet weak var titleOfBook: UITextField?
+    
+    
+    @IBAction func cancelPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func selectBookCover(_ sender: AnyObject) {
         let myPickerController = UIImagePickerController()
