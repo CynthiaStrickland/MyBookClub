@@ -17,9 +17,13 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     var memberSince : String?
     var memberAboutMe: String?
     
+    var imagePicker = UIImagePickerController()
+    var imagePicked = 0
+    
     var booksRead = [Books]()
     var users = [User]()
 
+    var bookauthorDictionary = [String:String]()
 
     let buttonBorder = UIColor.white.cgColor
     let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor
@@ -32,9 +36,13 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     @IBOutlet weak var saveMemberName: UIButton!
     @IBOutlet weak var memberName: UITextField!
     @IBOutlet weak var booksReadTableview: UITableView!
-    @IBOutlet weak var profileImage: UIImageView!
     
-
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var addBookReadImageView: UIImageView!
+    
+    @IBOutlet weak var addTitleOfBookRead: UITextField!
+    @IBOutlet weak var addAuthorOfBookRead: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,6 +56,7 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
     }
     
             //MARK :   PROFILE PICTURE SELECTION
@@ -61,30 +70,61 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
 
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        var selectedImageFromPicker : UIImage?
-        
-        if let editedImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
-                selectedImageFromPicker = editedImage
-        } else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
-                selectedImageFromPicker = originalImage
-        }
-        
-        if let selectedImage = selectedImageFromPicker {
-            profilePhotoImageView.image = selectedImage
-        
-        //  ******* Circular Image *******
-        self.profilePhotoImageView.layer.cornerRadius = self.profilePhotoImageView.frame.width / 2.0
-        self.profilePhotoImageView.clipsToBounds = true
-        
-        //  ******* BORDER COLOR ********
-        self.profilePhotoImageView.layer.borderWidth = 2.0
-        self.profilePhotoImageView.layer.borderColor = UIColor.white.cgColor
-
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func chooseImage(sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary){
+            print("chooseImage Button capture ")
+            
+            imagePicked = sender.tag
+            
+            self.present(imagePicker, animated: true, completion: nil)
         }
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+            let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+            
+            if imagePicked == 1 {
+                profileImage.image = pickedImage
+            } else if imagePicked == 0 {
+                addBookReadImageView.image = pickedImage
+            }
+            dismiss(animated: true, completion: nil)
+        
+        if let selectedImage = pickedImage {
+            profilePhotoImageView.image = selectedImage
+            
+            //  ******* Circular Image *******
+            self.profilePhotoImageView.layer.cornerRadius = self.profilePhotoImageView.frame.width / 2.0
+            self.profilePhotoImageView.clipsToBounds = true
+            
+            //  ******* BORDER COLOR ********
+            self.profilePhotoImageView.layer.borderWidth = 2.0
+            self.profilePhotoImageView.layer.borderColor = UIColor.white.cgColor
+            
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            
+        }
+    }
+    
+    @IBAction func selectAddBookImage(_ sender: AnyObject) {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.allowsEditing = true
+        pickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        
+        self.present(pickerController, animated: true, completion: nil)
+
+    }
+    
+    func addImagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        addBookReadImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     
     @IBAction func saveMemberName(_ sender: UIButton) {
         // TODO:   SAVE MEMBER NAME
@@ -131,7 +171,7 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 
     @IBAction func shareButtonPressed(_ sender: UIButton) {
         let infoToShare = titleOfBook
-        let vc = UIActivityViewController(activityItems: [infoToShare], applicationActivities: nil)
+        let vc = UIActivityViewController(activityItems: [infoToShare as Any], applicationActivities: nil)
         vc.popoverPresentationController?.sourceView = self.view
         vc.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
         self.present(vc, animated: true, completion: nil)
