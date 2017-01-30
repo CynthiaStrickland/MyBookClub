@@ -10,9 +10,6 @@ import UIKit
 
 class MyHomeTableviewCell: UITableViewCell {
 
-    @IBOutlet weak var titleOfBook: UILabel!
-    @IBOutlet weak var authorOfBook: UILabel!
-    @IBOutlet weak var bookImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

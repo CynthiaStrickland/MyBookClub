@@ -265,13 +265,13 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0sd-tZ-azO">
                                                                     <rect key="frame" x="74" y="14" width="252" height="38.5"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KgC-c3-pPH">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KgC-c3-pPH">
                                                                             <rect key="frame" x="0.0" y="0.0" width="252" height="22.5"/>
                                                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Szr-oQ-qOi">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Szr-oQ-qOi">
                                                                             <rect key="frame" x="0.0" y="22.5" width="252" height="16"/>
                                                                             <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="12"/>
                                                                             <nil key="textColor"/>
@@ -329,14 +329,18 @@
                                             <action selector="saveMemberName:" destination="Yxh-Ng-vPd" eventType="touchUpInside" id="Fnx-iU-0fE"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BookClub80.png" translatesAutoresizingMaskIntoConstraints="NO" id="gnx-nF-HxT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="gnx-nF-HxT">
                                         <rect key="frame" x="8" y="-35" width="70" height="70"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVT-FW-frh" userLabel="Profile Image Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="XVT-FW-frh" userLabel="Profile Image Button">
                                         <rect key="frame" x="8" y="-35" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="0bo-jx-39X"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                        <state key="normal" title="Click to Add Photo">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="selectProfilePhoto:" destination="Yxh-Ng-vPd" eventType="touchUpInside" id="n7r-4d-sOa"/>
                                         </connections>
@@ -353,9 +357,19 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2h-03-cZJ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZTw-RQ-Xcz" userLabel="Book Cover Image">
                                         <rect key="frame" x="8" y="447" width="60" height="60"/>
-                                        <state key="normal" title="AddBookImage"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="2Bv-08-PBo"/>
+                                            <constraint firstAttribute="width" constant="60" id="W6l-jf-Xe0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="K2h-03-cZJ">
+                                        <rect key="frame" x="8" y="447" width="60" height="60"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                        <state key="normal" title="Click to Add Photo of Book Cover">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="selectAddBookImage:" destination="Yxh-Ng-vPd" eventType="touchUpInside" id="Kx4-dM-2Ss"/>
                                         </connections>
@@ -379,18 +393,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vp-iN-Vcx" userLabel="Save Book Read Button">
-                                        <rect key="frame" x="114" y="515" width="147" height="30"/>
+                                        <rect key="frame" x="128" y="515" width="147" height="30"/>
                                         <state key="normal" title="SAVE BOOK READ">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BookClub40.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZTw-RQ-Xcz" userLabel="Book Cover Image">
-                                        <rect key="frame" x="8" y="447" width="60" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="2Bv-08-PBo"/>
-                                            <constraint firstAttribute="width" constant="60" id="W6l-jf-Xe0"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ehC-yb-s5o" secondAttribute="bottom" constant="58" id="22x-cM-ADI"/>
@@ -402,7 +409,7 @@
                                     <constraint firstItem="XVT-FW-frh" firstAttribute="centerY" secondItem="gnx-nF-HxT" secondAttribute="centerY" id="6mo-Xk-ht8"/>
                                     <constraint firstItem="mKP-oL-t3k" firstAttribute="top" secondItem="PV4-ne-bFi" secondAttribute="top" id="AKH-mt-VKL"/>
                                     <constraint firstItem="tBA-8W-jiI" firstAttribute="top" secondItem="eNp-kq-kCh" secondAttribute="bottom" id="AsP-fU-eQf"/>
-                                    <constraint firstItem="xSg-CI-Dki" firstAttribute="centerX" secondItem="9Vp-iN-Vcx" secondAttribute="centerX" id="Gj2-rz-JGh"/>
+                                    <constraint firstItem="xSg-CI-Dki" firstAttribute="centerX" secondItem="9Vp-iN-Vcx" secondAttribute="centerX" constant="-14" id="Gj2-rz-JGh"/>
                                     <constraint firstItem="eNp-kq-kCh" firstAttribute="leading" secondItem="tBA-8W-jiI" secondAttribute="leading" id="Hee-wr-Gww"/>
                                     <constraint firstItem="i0L-0V-9tE" firstAttribute="leading" secondItem="cOU-MM-rmB" secondAttribute="leading" id="Iel-zU-Crg"/>
                                     <constraint firstItem="ehC-yb-s5o" firstAttribute="leading" secondItem="cOU-MM-rmB" secondAttribute="leading" constant="12" id="IkB-NE-fUg"/>
@@ -427,12 +434,12 @@
                                     <constraint firstItem="ehC-yb-s5o" firstAttribute="top" secondItem="tBA-8W-jiI" secondAttribute="bottom" constant="8" symbolic="YES" id="lgh-7V-nJ6"/>
                                     <constraint firstItem="i0L-0V-9tE" firstAttribute="top" secondItem="cOU-MM-rmB" secondAttribute="top" constant="-45" id="mMW-S2-BfF"/>
                                     <constraint firstItem="eNp-kq-kCh" firstAttribute="trailing" secondItem="tBA-8W-jiI" secondAttribute="trailing" id="maz-l3-pGo"/>
-                                    <constraint firstItem="9Vp-iN-Vcx" firstAttribute="leading" secondItem="ehC-yb-s5o" secondAttribute="trailing" constant="17" id="n46-UC-el7"/>
+                                    <constraint firstItem="9Vp-iN-Vcx" firstAttribute="leading" secondItem="ehC-yb-s5o" secondAttribute="trailing" constant="31" id="n46-UC-el7"/>
                                     <constraint firstItem="etY-I7-4Gf" firstAttribute="leading" secondItem="cOU-MM-rmB" secondAttribute="leadingMargin" id="ohK-EQ-Cxf"/>
                                     <constraint firstItem="gnx-nF-HxT" firstAttribute="centerY" secondItem="mKP-oL-t3k" secondAttribute="centerY" id="rgq-MV-xSk"/>
                                     <constraint firstItem="i0L-0V-9tE" firstAttribute="centerX" secondItem="xSg-CI-Dki" secondAttribute="centerX" id="riD-6t-ZWS"/>
                                     <constraint firstItem="mKP-oL-t3k" firstAttribute="top" secondItem="cOU-MM-rmB" secondAttribute="top" constant="-15" id="s43-qo-XIu"/>
-                                    <constraint firstItem="Bbs-sx-iOp" firstAttribute="leading" secondItem="9Vp-iN-Vcx" secondAttribute="trailing" constant="39" id="s8T-v5-WWY"/>
+                                    <constraint firstItem="Bbs-sx-iOp" firstAttribute="leading" secondItem="9Vp-iN-Vcx" secondAttribute="trailing" constant="25" id="s8T-v5-WWY"/>
                                     <constraint firstItem="gnx-nF-HxT" firstAttribute="leading" secondItem="XVT-FW-frh" secondAttribute="leading" id="sOE-aU-b35"/>
                                     <constraint firstAttribute="trailing" secondItem="i0L-0V-9tE" secondAttribute="trailing" id="siF-rb-4Od"/>
                                     <constraint firstItem="9Vp-iN-Vcx" firstAttribute="baseline" secondItem="Bbs-sx-iOp" secondAttribute="baseline" id="thj-RA-Ln4"/>
@@ -441,6 +448,13 @@
                                     <constraint firstItem="XVT-FW-frh" firstAttribute="centerX" secondItem="gnx-nF-HxT" secondAttribute="centerX" id="ztO-sO-nbd"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Profile Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZ8-7Z-oQQ">
+                                <rect key="frame" x="97" y="28" width="262" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="cOU-MM-rmB" firstAttribute="leading" secondItem="M6U-eh-oHN" secondAttribute="leading" id="7AM-69-6b4"/>
@@ -453,7 +467,7 @@
                     <toolbarItems/>
                     <connections>
                         <outlet property="addAuthorOfBookRead" destination="tBA-8W-jiI" id="AOb-bb-LZb"/>
-                        <outlet property="addBookReadImageView" destination="ZTw-RQ-Xcz" id="S0G-15-ngd"/>
+                        <outlet property="addBookReadImageView" destination="ZTw-RQ-Xcz" id="wjI-95-60N"/>
                         <outlet property="addButton" destination="9Vp-iN-Vcx" id="Ee0-2g-NVu"/>
                         <outlet property="addTitleOfBookRead" destination="eNp-kq-kCh" id="Aff-pH-tda"/>
                         <outlet property="booksReadTableview" destination="xSg-CI-Dki" id="Vx8-NE-wu2"/>
