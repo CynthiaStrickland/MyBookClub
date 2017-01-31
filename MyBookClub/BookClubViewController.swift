@@ -27,6 +27,17 @@ class BookClubViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         customButtons()
+        bookClubImageShow()
+    }
+    
+    func bookClubImageShow() {
+//        let myBookClubImage = UserDefaults.standard.object(forKey: "Picture") as! NSData
+//        bookClubImage.image = myBookClubImage as! UIImage?
+        let imageData = UserDefaults.standard.object(forKey: "Picture") as? NSData
+        if let imageData = imageData {
+            let picture = UIImage(data:imageData as Data)
+            bookClubImage.image = picture
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

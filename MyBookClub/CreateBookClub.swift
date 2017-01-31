@@ -41,9 +41,10 @@ class CreateBookClub: UIViewController, UITextViewDelegate, UITextFieldDelegate,
         userDefaults.setValue(aboutBookClub.text, forKey: "AboutBookClub")
         userDefaults.setValue(clubDateTimeLocation.text, forKey: "ClubDateTimeLocation")
         
+        //MARK: ENCODING IMAGE INTO DATA
         if let pickedImage = bookClubImage.image {
-            let imageData = UIImagePNGRepresentation(pickedImage)
-            UserDefaults.setValue(imageData, forKey: "Picture")
+            let imageData = UIImagePNGRepresentation(pickedImage)! as NSData
+            UserDefaults.standard.setValue(imageData, forKey: "Picture")
         }
         userDefaults.synchronize()
 
@@ -59,18 +60,20 @@ class CreateBookClub: UIViewController, UITextViewDelegate, UITextFieldDelegate,
         aboutBookClub.text = userDefaults.object(forKey: "AboutBookClub") as? String
         clubDateTimeLocation.text = userDefaults.object(forKey: "ClubDateTimeLocation") as? String
         
-        let imageData = userDefaults.object(forKey: "Picture") as? NSData
+        //MARK:   DECODE THE IMAGE
+        let imageData = UserDefaults.standard.object(forKey: "Picture") as? NSData
         if let imageData = imageData {
-            let picture = UIImage(data: imageData as Data)
+            let picture = UIImage(data:imageData as Data)
             bookClubImage.image = picture
             
         }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        bookClubImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        self.dismiss(animated: true, completion: nil)
+        if let image = info[UIImagePickerControllerOriginalImage] {
+            bookClubImage.image = image as? UIImage
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     func customTextFieldSize() {
