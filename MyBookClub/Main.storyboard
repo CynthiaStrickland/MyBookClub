@@ -655,9 +655,9 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="wTO-Q7-mlR" kind="relationship" relationship="viewControllers" id="rk8-2I-tb1"/>
                         <segue destination="Yxh-Ng-vPd" kind="relationship" relationship="viewControllers" id="N3Y-11-4NK"/>
                         <segue destination="c2l-4m-Brl" kind="relationship" relationship="viewControllers" id="QVd-Gl-6xo"/>
+                        <segue destination="wTO-Q7-mlR" kind="relationship" relationship="viewControllers" id="rk8-2I-tb1"/>
                         <segue destination="LoS-dR-BAo" kind="relationship" relationship="viewControllers" id="uIm-53-QhA"/>
                     </connections>
                 </tabBarController>
@@ -1078,27 +1078,6 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About OUR CLUB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WA4-2Z-egj">
-                                <rect key="frame" x="20" y="81" width="335" height="346"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We meet at:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vug-sS-BHZ">
-                                <rect key="frame" x="20" y="441" width="335" height="107"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2he-ZR-DPy">
-                                <rect key="frame" x="316" y="565" width="33" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="EDIT">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6Q-Wc-9ce">
                                 <rect key="frame" x="277" y="34" width="72" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1109,18 +1088,126 @@
                                     <action selector="doneButtonPressed:" destination="GLq-aQ-hbQ" eventType="touchUpInside" id="DqT-mN-IqY"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Location Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fta-P0-YPj">
+                                <rect key="frame" x="16" y="445" width="333" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Date &amp; Time Club Meets" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nwf-Ih-MVB">
+                                <rect key="frame" x="16" y="542" width="333" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Hi, This book club is for people who love dogs, who want to read about dogs, share pics, and drink margarites" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OF4-im-Bme">
+                                <rect key="frame" x="21" y="86" width="333" height="333"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter the address where the club meets" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8JP-S6-F39">
+                                <rect key="frame" x="16" y="482" width="333" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0k-eJ-dyt">
+                                <rect key="frame" x="16" y="580" width="128" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="DIRECTIONS">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="directionsToClub:" destination="GLq-aQ-hbQ" eventType="touchUpInside" id="Ngp-DI-tbi"/>
+                                    <segue destination="wBG-Yv-mME" kind="show" id="QhY-U6-xoU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2he-ZR-DPy">
+                                <rect key="frame" x="273" y="580" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="editAboutBookClub:" destination="GLq-aQ-hbQ" eventType="touchUpInside" id="rrm-bu-JXe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="aboutLabel" destination="WA4-2Z-egj" id="o4t-8M-TYW"/>
-                        <outlet property="clubMeetingDateTimeLocation" destination="Vug-sS-BHZ" id="Zkt-Wl-31B"/>
+                        <outlet property="aboutText" destination="OF4-im-Bme" id="ckN-Av-o8X"/>
+                        <outlet property="directions" destination="i0k-eJ-dyt" id="wKT-sg-2pM"/>
                         <outlet property="doneButton" destination="w6Q-Wc-9ce" id="d9l-Le-Vgh"/>
+                        <outlet property="locationDateTime" destination="Nwf-Ih-MVB" id="BxB-Qg-3M1"/>
+                        <outlet property="locationName" destination="fta-P0-YPj" id="g12-6T-ZCw"/>
+                        <outlet property="saveButton" destination="2he-ZR-DPy" id="uxp-bY-dDj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wip-OM-muh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6337" y="2148"/>
+            <point key="canvasLocation" x="6336.8000000000002" y="2147.6761619190406"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="P84-Vg-uE1">
+            <objects>
+                <viewController id="wBG-Yv-mME" customClass="MapViewController" customModule="MyBookClub" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4e9-xH-BUo"/>
+                        <viewControllerLayoutGuide type="bottom" id="fha-pA-Lku"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4mr-vP-ZvZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tGV-wX-cPx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="YeM-eM-tE6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6i-JX-77n">
+                                <rect key="frame" x="274" y="26" width="77" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qXi-h9-fox"/>
+                                    <constraint firstAttribute="width" constant="77" id="tdU-pg-iUQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButton:" destination="wBG-Yv-mME" eventType="touchUpInside" id="ZZ0-M8-lyx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fha-pA-Lku" firstAttribute="top" secondItem="YeM-eM-tE6" secondAttribute="bottom" constant="552" id="8VQ-uA-4Aq"/>
+                            <constraint firstItem="YeM-eM-tE6" firstAttribute="leading" secondItem="tGV-wX-cPx" secondAttribute="leading" id="9pX-uj-rRD"/>
+                            <constraint firstItem="YeM-eM-tE6" firstAttribute="top" secondItem="4mr-vP-ZvZ" secondAttribute="top" id="AXh-vQ-Aty"/>
+                            <constraint firstAttribute="bottom" secondItem="tGV-wX-cPx" secondAttribute="bottom" id="BB9-mz-Zej"/>
+                            <constraint firstAttribute="trailing" secondItem="YeM-eM-tE6" secondAttribute="trailing" id="FVo-yx-r4w"/>
+                            <constraint firstItem="YeM-eM-tE6" firstAttribute="leading" secondItem="4mr-vP-ZvZ" secondAttribute="leading" id="TLo-Qm-tSi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O6i-JX-77n" secondAttribute="trailing" constant="8" id="Wpx-ze-4qv"/>
+                            <constraint firstItem="O6i-JX-77n" firstAttribute="top" secondItem="4e9-xH-BUo" secondAttribute="bottom" constant="6" id="lbh-Qf-ej6"/>
+                            <constraint firstItem="YeM-eM-tE6" firstAttribute="trailing" secondItem="tGV-wX-cPx" secondAttribute="trailing" id="niC-3V-NIb"/>
+                            <constraint firstItem="tGV-wX-cPx" firstAttribute="top" secondItem="O6i-JX-77n" secondAttribute="bottom" constant="8" symbolic="YES" id="yLN-eJ-KIK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="O6i-JX-77n" id="U24-0N-Mv0"/>
+                        <outlet property="mapView" destination="tGV-wX-cPx" id="xjQ-QE-re5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNf-ac-h2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6336.8000000000002" y="2838.530734632684"/>
         </scene>
         <!--Book Club Members View Controller-->
         <scene sceneID="s8I-n5-Lhb">

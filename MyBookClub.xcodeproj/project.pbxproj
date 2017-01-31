@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81789CA41E414F41004AB152 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81789CA31E414F41004AB152 /* MapViewController.swift */; };
+		81789CA71E41501E004AB152 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81789CA61E41501E004AB152 /* MapKit.framework */; };
+		81789CA91E415028004AB152 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81789CA81E415028004AB152 /* Contacts.framework */; };
+		81789CAB1E41503D004AB152 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81789CAA1E41503D004AB152 /* AddressBook.framework */; };
+		81789CAD1E41506F004AB152 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81789CAC1E41506F004AB152 /* WebKit.framework */; };
 		81C6DFEB1E3D34A400EEFF86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6DFEA1E3D34A400EEFF86 /* AppDelegate.swift */; };
 		81C6DFF21E3D34A400EEFF86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C6DFF11E3D34A400EEFF86 /* Assets.xcassets */; };
 		81C6DFF51E3D34A400EEFF86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C6DFF31E3D34A400EEFF86 /* LaunchScreen.storyboard */; };
@@ -56,6 +61,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81789CA31E414F41004AB152 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
+		81789CA61E41501E004AB152 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		81789CA81E415028004AB152 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		81789CAA1E41503D004AB152 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		81789CAC1E41506F004AB152 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		81C6DFE71E3D34A400EEFF86 /* MyBookClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBookClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C6DFEA1E3D34A400EEFF86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = MyBookClub/AppDelegate.swift; sourceTree = "<group>"; };
 		81C6DFF11E3D34A400EEFF86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MyBookClub/Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +108,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81789CAD1E41506F004AB152 /* WebKit.framework in Frameworks */,
+				81789CAB1E41503D004AB152 /* AddressBook.framework in Frameworks */,
+				81789CA91E415028004AB152 /* Contacts.framework in Frameworks */,
+				81789CA71E41501E004AB152 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +132,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81789CA51E41501D004AB152 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81789CAC1E41506F004AB152 /* WebKit.framework */,
+				81789CAA1E41503D004AB152 /* AddressBook.framework */,
+				81789CA81E415028004AB152 /* Contacts.framework */,
+				81789CA61E41501E004AB152 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		81C6DFDE1E3D34A400EEFF86 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +153,7 @@
 				81C6DFFE1E3D34A400EEFF86 /* MyBookClubTests */,
 				81C6E0091E3D34A400EEFF86 /* MyBookClubUITests */,
 				81C6DFE81E3D34A400EEFF86 /* Products */,
+				81789CA51E41501D004AB152 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +173,7 @@
 				81C6E0471E3D38BA00EEFF86 /* LoginViewController.swift */,
 				81C6E0491E3D38D000EEFF86 /* PasswordResetViewController.swift */,
 				81C6E03E1E3D353400EEFF86 /* AboutViewController.swift */,
+				81789CA31E414F41004AB152 /* MapViewController.swift */,
 				81C6E03F1E3D353400EEFF86 /* AddBookReadViewController.swift */,
 				81C6E0281E3D352B00EEFF86 /* BookClubMembersViewController.swift */,
 				81C6E02A1E3D352B00EEFF86 /* BookClubViewController.swift */,
@@ -373,6 +400,7 @@
 				81C6E04E1E3D614200EEFF86 /* MyHomeTableviewCell.swift in Sources */,
 				81C6E03B1E3D352B00EEFF86 /* SearchClubViewController.swift in Sources */,
 				81C6E0351E3D352B00EEFF86 /* BookClubViewController.swift in Sources */,
+				81789CA41E414F41004AB152 /* MapViewController.swift in Sources */,
 				81C6E03A1E3D352B00EEFF86 /* MyHomeViewController.swift in Sources */,
 				81C6E0381E3D352B00EEFF86 /* BuyBookViewcontrollerViewController.swift in Sources */,
 				81C6E0401E3D353400EEFF86 /* AboutViewController.swift in Sources */,
@@ -620,6 +648,7 @@
 				81C6E0111E3D34A400EEFF86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81C6E0121E3D34A400EEFF86 /* Build configuration list for PBXNativeTarget "MyBookClubTests" */ = {
 			isa = XCConfigurationList;
@@ -628,6 +657,7 @@
 				81C6E0141E3D34A400EEFF86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81C6E0151E3D34A400EEFF86 /* Build configuration list for PBXNativeTarget "MyBookClubUITests" */ = {
 			isa = XCConfigurationList;
@@ -636,6 +666,7 @@
 				81C6E0171E3D34A400EEFF86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
