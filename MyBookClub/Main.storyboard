@@ -481,7 +481,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bat-R8-YKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6096.8000000000002" y="1244.527736131934"/>
+            <point key="canvasLocation" x="4847" y="1245"/>
         </scene>
         <!--Note View Controller-->
         <scene sceneID="YlC-bg-ASJ">
@@ -542,7 +542,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6q-zs-rkh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6134" y="2038"/>
+            <point key="canvasLocation" x="4846" y="2148"/>
         </scene>
         <!--SearchBookClubs-->
         <scene sceneID="V9J-V2-u2S">
@@ -642,7 +642,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3hw-55-a8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5421.6000000000004" y="1245.4272863568217"/>
+            <point key="canvasLocation" x="6338" y="1245"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ywi-Ov-ApV">
@@ -655,9 +655,9 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
+                        <segue destination="wTO-Q7-mlR" kind="relationship" relationship="viewControllers" id="rk8-2I-tb1"/>
                         <segue destination="Yxh-Ng-vPd" kind="relationship" relationship="viewControllers" id="N3Y-11-4NK"/>
                         <segue destination="c2l-4m-Brl" kind="relationship" relationship="viewControllers" id="QVd-Gl-6xo"/>
-                        <segue destination="wTO-Q7-mlR" kind="relationship" relationship="viewControllers" id="rk8-2I-tb1"/>
                         <segue destination="LoS-dR-BAo" kind="relationship" relationship="viewControllers" id="uIm-53-QhA"/>
                     </connections>
                 </tabBarController>
@@ -714,7 +714,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="createBookClubPressed:" destination="wTO-Q7-mlR" eventType="touchUpInside" id="fCD-HH-txe"/>
+                                            <action selector="createBookClub:" destination="wTO-Q7-mlR" eventType="touchUpInside" id="dlh-k7-pDc"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsZ-pG-AN1">
@@ -769,11 +769,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Create A Club" image="home30.png" id="exg-4L-he5"/>
                     <connections>
-                        <outlet property="aboutBookClub" destination="s7y-ga-BUb" id="xSY-QA-o9O"/>
+                        <outlet property="aboutBookClub" destination="s7y-ga-BUb" id="Qyd-74-7xy"/>
                         <outlet property="bookClubImage" destination="Fcn-bO-41V" id="34d-lE-A6g"/>
-                        <outlet property="clubDateTimeLocation" destination="9sL-pv-ah1" id="gWY-4e-jtJ"/>
-                        <outlet property="createBookClub" destination="Do8-1H-EHB" id="DET-3O-osi"/>
-                        <outlet property="nameOfBookClub" destination="pCL-vU-O5b" id="0td-HF-6AU"/>
+                        <outlet property="clubDateTimeLocation" destination="9sL-pv-ah1" id="l7m-Vr-81N"/>
+                        <outlet property="createBookClub" destination="Do8-1H-EHB" id="RUR-vU-wlq"/>
+                        <outlet property="nameOfBookClub" destination="pCL-vU-O5b" id="5L5-ly-ew2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uwc-MT-6mF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -805,7 +805,7 @@
                                             <constraint firstAttribute="width" constant="84" id="nhy-n3-48N"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently Reading:  &quot;Moby Dick&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIJ-QS-3W1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Club is currently reading:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIJ-QS-3W1">
                                         <rect key="frame" x="8" y="108" width="270" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -836,6 +836,7 @@
                                         </state>
                                         <connections>
                                             <action selector="memberListButtonPressed:" destination="c2l-4m-Brl" eventType="touchUpInside" id="7WD-9L-qS1"/>
+                                            <segue destination="lDy-IS-dV1" kind="show" id="BEi-Bb-AlQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jR6-2R-IzJ">
@@ -888,14 +889,14 @@
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ziW-kQ-v0T">
-                                        <rect key="frame" x="14" y="142" width="347" height="410"/>
+                                        <rect key="frame" x="14" y="174" width="347" height="378"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pastbooksread" rowHeight="68" id="vYF-6b-tn7" customClass="BookClubTableViewCell" customModule="MyBookClub" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="347" height="68"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vYF-6b-tn7" id="1zD-9e-gMQ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="347" height="67.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="347" height="67"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MMd-fH-7U1">
@@ -942,6 +943,13 @@
                                             <outlet property="delegate" destination="c2l-4m-Brl" id="3uM-DJ-Wdm"/>
                                         </connections>
                                     </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moby Dick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwo-P2-8Zr">
+                                        <rect key="frame" x="8" y="141" width="352" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="VYD-Ri-fnL" firstAttribute="centerX" secondItem="THV-ri-Wn1" secondAttribute="centerX" id="17d-8M-jEI"/>
@@ -962,7 +970,7 @@
                                     <constraint firstItem="Nod-pQ-1v9" firstAttribute="leading" secondItem="THV-ri-Wn1" secondAttribute="leading" id="aLv-Bt-2Sj"/>
                                     <constraint firstItem="Asq-CU-odL" firstAttribute="bottom" secondItem="N02-bl-0yx" secondAttribute="bottom" id="bCF-5n-o4B"/>
                                     <constraint firstItem="LIJ-QS-3W1" firstAttribute="top" secondItem="jR6-2R-IzJ" secondAttribute="top" id="clh-pb-w1d"/>
-                                    <constraint firstItem="ziW-kQ-v0T" firstAttribute="top" secondItem="jR6-2R-IzJ" secondAttribute="bottom" constant="1" id="g0e-7P-hgh"/>
+                                    <constraint firstItem="ziW-kQ-v0T" firstAttribute="top" secondItem="jR6-2R-IzJ" secondAttribute="bottom" constant="33" id="g0e-7P-hgh"/>
                                     <constraint firstItem="VYD-Ri-fnL" firstAttribute="leading" secondItem="Nod-pQ-1v9" secondAttribute="leading" id="gD8-ST-wfa"/>
                                     <constraint firstAttribute="trailing" secondItem="ZpO-uZ-DNY" secondAttribute="trailing" id="h3W-d0-VDE"/>
                                     <constraint firstItem="Ady-8f-nbw" firstAttribute="trailing" secondItem="jR6-2R-IzJ" secondAttribute="trailing" id="hfe-qc-hs6"/>
@@ -1003,7 +1011,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vo7-SA-KlI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4764" y="1245.4272863568217"/>
+            <point key="canvasLocation" x="5598" y="1245"/>
         </scene>
         <!--Buy Book Viewcontroller View Controller-->
         <scene sceneID="4cp-kX-23C">
@@ -1052,7 +1060,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8sU-ZG-SmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4057" y="2038"/>
+            <point key="canvasLocation" x="5598" y="2148"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="vNX-Oj-5Sw">
@@ -1112,7 +1120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wip-OM-muh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4764" y="2038"/>
+            <point key="canvasLocation" x="6337" y="2148"/>
         </scene>
         <!--Book Club Members View Controller-->
         <scene sceneID="s8I-n5-Lhb">
@@ -1131,12 +1139,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="memberlist" id="CuT-pz-vRu" customClass="BookClubMembersTableViewCell" customModule="MyBookClub" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="memberlist" textLabel="PkP-rW-mqc" imageView="qLn-ih-BGE" style="IBUITableViewCellStyleDefault" id="CuT-pz-vRu" customClass="BookClubMembersTableViewCell" customModule="MyBookClub" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CuT-pz-vRu" id="9q1-xX-kfI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PkP-rW-mqc">
+                                                    <rect key="frame" x="60" y="0.0" width="300" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="BC30.png" id="qLn-ih-BGE">
+                                                    <rect key="frame" x="15" y="6" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -1154,7 +1175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWX-ac-a6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5422" y="2038"/>
+            <point key="canvasLocation" x="7076" y="2148"/>
         </scene>
     </scenes>
     <resources>

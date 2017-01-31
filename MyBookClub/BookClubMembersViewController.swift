@@ -11,7 +11,7 @@ import UIKit
 class BookClubMembersViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
 
-    var users = [User]()
+    var users = ["Cynthia", "Donna"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +25,15 @@ class BookClubMembersViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
+        return 5
         
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "memberlist", for: indexPath)
-        let user = users[indexPath.row]
-        cell.textLabel?.text = user.email
-        cell.detailTextLabel?.text = user.membername
-        cell.imageView!.image = UIImage(contentsOfFile: user.profileImageUrl!)
+        let members = users[indexPath.row]
+        cell.textLabel?.text = members
         
         return cell
         

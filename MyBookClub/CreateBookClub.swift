@@ -18,10 +18,12 @@ class CreateBookClub: UIViewController, UITextViewDelegate, UITextFieldDelegate,
     let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor
 
     @IBOutlet weak var bookClubImage: UIImageView!
+
+    @IBOutlet weak var aboutBookClub: UITextField!
     @IBOutlet weak var nameOfBookClub: UITextField!
-    @IBOutlet weak var aboutBookClub: UITextView!
     @IBOutlet weak var createBookClub: UIButton!
     @IBOutlet weak var clubDateTimeLocation: UITextField!
+
 
     @IBAction func addPhotoPressed(_ sender: AnyObject) {
         let myPickerController = UIImagePickerController()
@@ -32,12 +34,37 @@ class CreateBookClub: UIViewController, UITextViewDelegate, UITextFieldDelegate,
         self.present(myPickerController, animated: true, completion: nil)
     }
     
+    @IBAction func createBookClub(_ sender: AnyObject) {
+        
+        let userDefaults = UserDefaults.standard
+        userDefaults.setValue(nameOfBookClub.text, forKey: "NameOfBookClub")
+        userDefaults.setValue(aboutBookClub.text, forKey: "AboutBookClub")
+        userDefaults.setValue(clubDateTimeLocation.text, forKey: "ClubDateTimeLocation")
+        
+        if let pickedImage = bookClubImage.image {
+            let imageData = UIImagePNGRepresentation(pickedImage)
+            UserDefaults.setValue(imageData, forKey: "Picture")
+        }
+        userDefaults.synchronize()
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         customButtons()
         customTextFieldSize()
         
-
+        let userDefaults = UserDefaults.standard
+        nameOfBookClub.text = userDefaults.object(forKey: "NameOfBookClub") as? String
+        aboutBookClub.text = userDefaults.object(forKey: "AboutBookClub") as? String
+        clubDateTimeLocation.text = userDefaults.object(forKey: "ClubDateTimeLocation") as? String
+        
+        let imageData = userDefaults.object(forKey: "Picture") as? NSData
+        if let imageData = imageData {
+            let picture = UIImage(data: imageData as Data)
+            bookClubImage.image = picture
+            
+        }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
