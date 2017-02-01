@@ -8,9 +8,12 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
 
+    var locationManager: CLLocationManager!
+    
     let buttonBorder = UIColor.white.cgColor
     let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor
     
@@ -24,14 +27,42 @@ class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         customButtons()
-
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        determineCurrentLocation()
+    }
+    
+    func determineCurrentLocation () {
+            locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+        }
+    
+    @nonobjc func bookClubLocationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation:CLLocation = locations[0] as CLLocation
+        manager.stopUpdatingLocation()
+        
+        let location = CLLocationCoordinate2DMake(userLocation.coordinate.latitude, userLocation.coordinate.longitude)
+        
+        let span = MKCoordinateSpanMake(0.5, 0.5)
+        
+        let region = MKCoordinateRegion (center: location, span: span)
+        
+        mapView.setRegion(region, animated: true)
+        
+        //DROP PIN
+        let myAnnotation: MKPointAnnotation = MKPointAnnotation()
+        myAnnotation.coordinate = CLLocationCoordinate2DMake(userLocation.coordinate.latitude, userLocation.coordinate.longitude);
+        myAnnotation.title = "Current location"
+        mapView.addAnnotation(myAnnotation)
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func customButtons() {
         cancelButton.layer.borderColor = buttonBorder

@@ -22,8 +22,9 @@ class AboutViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var locationName: UITextField!
     @IBOutlet weak var directions: UIButton!
-    @IBOutlet weak var locationAddress: UITextField!
-    @IBOutlet weak var locationDateTime: UITextField!
+    @IBOutlet weak var locationTime: UITextField!
+    @IBOutlet weak var locationDate: UITextField!
+    @IBOutlet weak var locationAddress: UITextView!
     
     
     @IBAction func directionsToClub(_ sender: UIButton) {
@@ -70,7 +71,7 @@ class AboutViewController: UIViewController {
         saveButton.layer.cornerRadius = 10
         
         directions.layer.borderColor = buttonBorder
-        saveButton.layer.backgroundColor  = buttonColor
+        directions.layer.backgroundColor  = buttonColor
         directions.layer.borderWidth = 1
         directions.layer.cornerRadius = 10
         }

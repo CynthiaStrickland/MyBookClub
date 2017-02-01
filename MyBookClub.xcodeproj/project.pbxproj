@@ -12,6 +12,7 @@
 		81789CA91E415028004AB152 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81789CA81E415028004AB152 /* Contacts.framework */; };
 		81789CAB1E41503D004AB152 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81789CAA1E41503D004AB152 /* AddressBook.framework */; };
 		81789CAD1E41506F004AB152 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81789CAC1E41506F004AB152 /* WebKit.framework */; };
+		81789CAF1E415320004AB152 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81789CAE1E415320004AB152 /* CoreLocation.framework */; };
 		81C6DFEB1E3D34A400EEFF86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6DFEA1E3D34A400EEFF86 /* AppDelegate.swift */; };
 		81C6DFF21E3D34A400EEFF86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C6DFF11E3D34A400EEFF86 /* Assets.xcassets */; };
 		81C6DFF51E3D34A400EEFF86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C6DFF31E3D34A400EEFF86 /* LaunchScreen.storyboard */; };
@@ -66,6 +67,7 @@
 		81789CA81E415028004AB152 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		81789CAA1E41503D004AB152 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		81789CAC1E41506F004AB152 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		81789CAE1E415320004AB152 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		81C6DFE71E3D34A400EEFF86 /* MyBookClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBookClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C6DFEA1E3D34A400EEFF86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = MyBookClub/AppDelegate.swift; sourceTree = "<group>"; };
 		81C6DFF11E3D34A400EEFF86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MyBookClub/Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81789CAF1E415320004AB152 /* CoreLocation.framework in Frameworks */,
 				81789CAD1E41506F004AB152 /* WebKit.framework in Frameworks */,
 				81789CAB1E41503D004AB152 /* AddressBook.framework in Frameworks */,
 				81789CA91E415028004AB152 /* Contacts.framework in Frameworks */,
@@ -135,6 +138,7 @@
 		81789CA51E41501D004AB152 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81789CAE1E415320004AB152 /* CoreLocation.framework */,
 				81789CAC1E41506F004AB152 /* WebKit.framework */,
 				81789CAA1E41503D004AB152 /* AddressBook.framework */,
 				81789CA81E415028004AB152 /* Contacts.framework */,
