@@ -28,10 +28,7 @@ class AboutViewController: UIViewController {
     
     
     @IBAction func directionsToClub(_ sender: UIButton) {
-        
-        
-        
-        
+      
 //        var address = locatinAddress.text
 //        var geocoder = CLGeocoder()
 //        geocoder.geocodeAddressString(address, {(placemarks: [AnyObject]!, error: NSError!) -> Void in
