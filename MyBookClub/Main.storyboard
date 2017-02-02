@@ -1213,10 +1213,10 @@
             </objects>
             <point key="canvasLocation" x="6281" y="2148"/>
         </scene>
-        <!--Map View View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="t10-x3-qT7">
             <objects>
-                <viewController id="twB-r3-lt5" customClass="MapViewViewController" customModule="MyBookClub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="twB-r3-lt5" customClass="MapViewController" customModule="MyBookClub" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="l8q-eZ-ajK"/>
                         <viewControllerLayoutGuide type="bottom" id="fgV-2u-lY8"/>

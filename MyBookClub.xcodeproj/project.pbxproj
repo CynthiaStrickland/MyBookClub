@@ -11,7 +11,7 @@
 		8155FFDF1E41A165001595E3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8155FFDE1E41A165001595E3 /* CoreTelephony.framework */; };
 		816C75891E43C370007BDC08 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 816C75881E43C370007BDC08 /* MetalKit.framework */; };
 		816C758B1E43C84E007BDC08 /* icon_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 816C758A1E43C84E007BDC08 /* icon_me@2x.png */; };
-		816C758D1E43C925007BDC08 /* MapViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816C758C1E43C925007BDC08 /* MapViewViewController.swift */; };
+		816C758D1E43C925007BDC08 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816C758C1E43C925007BDC08 /* MapViewController.swift */; };
 		81789CA71E41501E004AB152 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81789CA61E41501E004AB152 /* MapKit.framework */; };
 		81789CA91E415028004AB152 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81789CA81E415028004AB152 /* Contacts.framework */; };
 		81789CAB1E41503D004AB152 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81789CAA1E41503D004AB152 /* AddressBook.framework */; };
@@ -77,7 +77,7 @@
 		816C75851E43C10C007BDC08 /* Google Maps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Google Maps.h"; sourceTree = "<group>"; };
 		816C75881E43C370007BDC08 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		816C758A1E43C84E007BDC08 /* icon_me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_me@2x.png"; sourceTree = "<group>"; };
-		816C758C1E43C925007BDC08 /* MapViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewViewController.swift; path = ../MapViewViewController.swift; sourceTree = "<group>"; };
+		816C758C1E43C925007BDC08 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
 		81789CA61E41501E004AB152 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		81789CA81E415028004AB152 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		81789CAA1E41503D004AB152 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -225,7 +225,7 @@
 				81C6E0471E3D38BA00EEFF86 /* LoginViewController.swift */,
 				81C6E0491E3D38D000EEFF86 /* PasswordResetViewController.swift */,
 				81C6E03E1E3D353400EEFF86 /* AboutViewController.swift */,
-				816C758C1E43C925007BDC08 /* MapViewViewController.swift */,
+				816C758C1E43C925007BDC08 /* MapViewController.swift */,
 				81C6E03F1E3D353400EEFF86 /* AddBookReadViewController.swift */,
 				81C6E0281E3D352B00EEFF86 /* BookClubMembersViewController.swift */,
 				81C6E02A1E3D352B00EEFF86 /* BookClubViewController.swift */,
@@ -263,6 +263,7 @@
 		81C6E0441E3D37C200EEFF86 /* MODALS */ = {
 			isa = PBXGroup;
 			children = (
+				81C6DFF61E3D34A400EEFF86 /* Info.plist */,
 				81C6DFEA1E3D34A400EEFF86 /* AppDelegate.swift */,
 				81C6E0311E3D352B00EEFF86 /* User.swift */,
 				81C6E02C1E3D352B00EEFF86 /* Books.swift */,
@@ -291,7 +292,6 @@
 				81C6E01E1E3D34E900EEFF86 /* home30.png */,
 				81C6E01A1E3D34CF00EEFF86 /* backgroundImage.png */,
 				81C6E01C1E3D34DC00EEFF86 /* BC30.png */,
-				81C6DFF61E3D34A400EEFF86 /* Info.plist */,
 			);
 			name = SUPPORTING;
 			sourceTree = "<group>";
@@ -597,7 +597,7 @@
 				81C6E0341E3D352B00EEFF86 /* BookClubTableViewCell.swift in Sources */,
 				81C6E0391E3D352B00EEFF86 /* CreateBookClub.swift in Sources */,
 				81C6E03D1E3D352B00EEFF86 /* UserBookNotes.swift in Sources */,
-				816C758D1E43C925007BDC08 /* MapViewViewController.swift in Sources */,
+				816C758D1E43C925007BDC08 /* MapViewController.swift in Sources */,
 				81C6E0361E3D352B00EEFF86 /* BookClubViewController+TableView.swift in Sources */,
 				81C6E0411E3D353400EEFF86 /* AddBookReadViewController.swift in Sources */,
 				81C6E04E1E3D614200EEFF86 /* MyHomeTableviewCell.swift in Sources */,
