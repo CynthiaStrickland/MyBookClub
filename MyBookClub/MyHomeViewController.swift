@@ -56,7 +56,8 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        let userDefaults = UserDefaults.standard
+        memberName.text = userDefaults.object(forKey: "MyMemberName") as? String
     }
     
             //MARK :   PROFILE PICTURE SELECTION
@@ -127,7 +128,9 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     
     @IBAction func saveMemberName(_ sender: UIButton) {
-        // TODO:   SAVE MEMBER NAME
+        let userDefaults = UserDefaults.standard
+        userDefaults.setValue(memberName.text, forKey: "MyMemberName")
+        userDefaults.synchronize()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

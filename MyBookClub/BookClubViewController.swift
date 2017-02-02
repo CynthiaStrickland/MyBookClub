@@ -27,7 +27,14 @@ class BookClubViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         customButtons()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         bookClubImageShow()
+        
+        let userDefaults = UserDefaults.standard
+        bookClubName.text = userDefaults.object(forKey: "NameOfBookClub") as? String
+        
     }
     
     func bookClubImageShow() {
