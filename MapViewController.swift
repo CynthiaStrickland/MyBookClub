@@ -8,11 +8,12 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 import GooglePlaces
 import GoogleMaps
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: GMSMapView!
     
@@ -21,10 +22,10 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.delegate = self as? CLLocationManagerDelegate
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        locationManager.requestAlwaysAuthorization()
         
     }
     
