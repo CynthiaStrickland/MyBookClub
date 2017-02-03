@@ -15,7 +15,7 @@ import GoogleMaps
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
 
-    @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var mapView: MKMapView!
     
     fileprivate let locationManager = CLLocationManager()
     
@@ -29,24 +29,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    override func loadView() {
-        let camera = GMSCameraPosition.camera(withLatitude: 37.621262,
-                                              longitude: -122.378945,
-                                              zoom: 10)
-        let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
-        mapView.mapType = kGMSTypeSatellite
-        view = mapView
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
         
-        let currentLocation = CLLocationCoordinate2DMake(37.621262, -122.378945)
-        let marker = GMSMarker(position: currentLocation)
-        marker.title = "SFO Airport"
-        marker.map = mapView
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.02, 0.02)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(MapViewController.next as (MapViewController) -> () -> ()))
+        let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
         
-    }
-    
-    func next() {
+        mapView.setRegion(region, animated: true)
+        
+        self.mapView.showsUserLocation = true
+        
         
     }
 }
