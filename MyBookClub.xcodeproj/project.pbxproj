@@ -10,7 +10,7 @@
 		13A9AAEF705324A98777EB0C /* Pods_MyBookClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D52B481D67DB44CBAE9ABF /* Pods_MyBookClub.framework */; };
 		8155FFDF1E41A165001595E3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8155FFDE1E41A165001595E3 /* CoreTelephony.framework */; };
 		816C75891E43C370007BDC08 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 816C75881E43C370007BDC08 /* MetalKit.framework */; };
-		816C758B1E43C84E007BDC08 /* icon_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 816C758A1E43C84E007BDC08 /* icon_me@2x.png */; };
+		816C758B1E43C84E007BDC08 /* me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 816C758A1E43C84E007BDC08 /* me@2x.png */; };
 		816C758D1E43C925007BDC08 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816C758C1E43C925007BDC08 /* MapViewController.swift */; };
 		81789CA71E41501E004AB152 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81789CA61E41501E004AB152 /* MapKit.framework */; };
 		81789CA91E415028004AB152 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81789CA81E415028004AB152 /* Contacts.framework */; };
@@ -37,11 +37,11 @@
 		81C6E03C1E3D352B00EEFF86 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E0311E3D352B00EEFF86 /* User.swift */; };
 		81C6E03D1E3D352B00EEFF86 /* UserBookNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E0321E3D352B00EEFF86 /* UserBookNotes.swift */; };
 		81C6E0401E3D353400EEFF86 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E03E1E3D353400EEFF86 /* AboutViewController.swift */; };
-		81C6E0411E3D353400EEFF86 /* AddBookReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E03F1E3D353400EEFF86 /* AddBookReadViewController.swift */; };
 		81C6E0431E3D354900EEFF86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C6E0421E3D354900EEFF86 /* Main.storyboard */; };
 		81C6E0481E3D38BA00EEFF86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E0471E3D38BA00EEFF86 /* LoginViewController.swift */; };
 		81C6E04A1E3D38D000EEFF86 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E0491E3D38D000EEFF86 /* PasswordResetViewController.swift */; };
 		81C6E04E1E3D614200EEFF86 /* MyHomeTableviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E04D1E3D614200EEFF86 /* MyHomeTableviewCell.swift */; };
+		81EE89841E451CEA0049C49C /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EE89831E451CEA0049C49C /* PinAnnotation.swift */; };
 		C8B4DA9B69D97AC369359897 /* Pods_MyBookClubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D5D41BA41B4F307FF5F979 /* Pods_MyBookClubUITests.framework */; };
 		D31ADF3B9EBFD6B7C8646248 /* Pods_MyBookClubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880C7DED4462D8D3CC45F527 /* Pods_MyBookClubTests.framework */; };
 /* End PBXBuildFile section */
@@ -71,7 +71,7 @@
 		8155FFDE1E41A165001595E3 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		816C75841E43C10C007BDC08 /* MyBookClub-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyBookClub-Bridging-Header.h"; sourceTree = "<group>"; };
 		816C75881E43C370007BDC08 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
-		816C758A1E43C84E007BDC08 /* icon_me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_me@2x.png"; sourceTree = "<group>"; };
+		816C758A1E43C84E007BDC08 /* me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me@2x.png"; sourceTree = "<group>"; };
 		816C758C1E43C925007BDC08 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
 		81789CA61E41501E004AB152 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		81789CA81E415028004AB152 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
@@ -104,11 +104,11 @@
 		81C6E0311E3D352B00EEFF86 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = MyBookClub/User.swift; sourceTree = "<group>"; };
 		81C6E0321E3D352B00EEFF86 /* UserBookNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBookNotes.swift; sourceTree = "<group>"; };
 		81C6E03E1E3D353400EEFF86 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		81C6E03F1E3D353400EEFF86 /* AddBookReadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookReadViewController.swift; sourceTree = "<group>"; };
 		81C6E0421E3D354900EEFF86 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = MyBookClub/Main.storyboard; sourceTree = "<group>"; };
 		81C6E0471E3D38BA00EEFF86 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		81C6E0491E3D38D000EEFF86 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		81C6E04D1E3D614200EEFF86 /* MyHomeTableviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHomeTableviewCell.swift; sourceTree = "<group>"; };
+		81EE89831E451CEA0049C49C /* PinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 		81FC2BE41E417516008DDD38 /* CarrierBundleUtilities.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = CarrierBundleUtilities.tbd; path = usr/lib/CarrierBundleUtilities.tbd; sourceTree = SDKROOT; };
 		880C7DED4462D8D3CC45F527 /* Pods_MyBookClubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBookClubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D52B481D67DB44CBAE9ABF /* Pods_MyBookClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBookClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +186,8 @@
 		81C6DFDE1E3D34A400EEFF86 = {
 			isa = PBXGroup;
 			children = (
+				81C6DFF61E3D34A400EEFF86 /* Info.plist */,
+				81C6DFEA1E3D34A400EEFF86 /* AppDelegate.swift */,
 				81C6E0451E3D37CC00EEFF86 /* VIEWS */,
 				81C6E0441E3D37C200EEFF86 /* MODALS */,
 				81C6DFE91E3D34A400EEFF86 /* CONTROLLERS */,
@@ -215,7 +217,6 @@
 				81C6E0491E3D38D000EEFF86 /* PasswordResetViewController.swift */,
 				81C6E03E1E3D353400EEFF86 /* AboutViewController.swift */,
 				816C758C1E43C925007BDC08 /* MapViewController.swift */,
-				81C6E03F1E3D353400EEFF86 /* AddBookReadViewController.swift */,
 				81C6E0281E3D352B00EEFF86 /* BookClubMembersViewController.swift */,
 				81C6E02A1E3D352B00EEFF86 /* BookClubViewController.swift */,
 				81C6E0291E3D352B00EEFF86 /* BookClubTableViewCell.swift */,
@@ -252,8 +253,7 @@
 		81C6E0441E3D37C200EEFF86 /* MODALS */ = {
 			isa = PBXGroup;
 			children = (
-				81C6DFF61E3D34A400EEFF86 /* Info.plist */,
-				81C6DFEA1E3D34A400EEFF86 /* AppDelegate.swift */,
+				81EE89831E451CEA0049C49C /* PinAnnotation.swift */,
 				81C6E0311E3D352B00EEFF86 /* User.swift */,
 				81C6E02C1E3D352B00EEFF86 /* Books.swift */,
 			);
@@ -273,7 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				816C75841E43C10C007BDC08 /* MyBookClub-Bridging-Header.h */,
-				816C758A1E43C84E007BDC08 /* icon_me@2x.png */,
+				816C758A1E43C84E007BDC08 /* me@2x.png */,
 				81C6DFF11E3D34A400EEFF86 /* Assets.xcassets */,
 				81C6E01E1E3D34E900EEFF86 /* home30.png */,
 				81C6E01A1E3D34CF00EEFF86 /* backgroundImage.png */,
@@ -408,7 +408,7 @@
 				81C6E0431E3D354900EEFF86 /* Main.storyboard in Resources */,
 				81C6E01D1E3D34DC00EEFF86 /* BC30.png in Resources */,
 				81C6E01B1E3D34CF00EEFF86 /* backgroundImage.png in Resources */,
-				816C758B1E43C84E007BDC08 /* icon_me@2x.png in Resources */,
+				816C758B1E43C84E007BDC08 /* me@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,7 +581,6 @@
 				81C6E03D1E3D352B00EEFF86 /* UserBookNotes.swift in Sources */,
 				816C758D1E43C925007BDC08 /* MapViewController.swift in Sources */,
 				81C6E0361E3D352B00EEFF86 /* BookClubViewController+TableView.swift in Sources */,
-				81C6E0411E3D353400EEFF86 /* AddBookReadViewController.swift in Sources */,
 				81C6E04E1E3D614200EEFF86 /* MyHomeTableviewCell.swift in Sources */,
 				81C6E03B1E3D352B00EEFF86 /* SearchClubViewController.swift in Sources */,
 				81C6E0351E3D352B00EEFF86 /* BookClubViewController.swift in Sources */,
@@ -589,6 +588,7 @@
 				81C6E0381E3D352B00EEFF86 /* BuyBookViewcontrollerViewController.swift in Sources */,
 				81C6E0401E3D353400EEFF86 /* AboutViewController.swift in Sources */,
 				81C6E03C1E3D352B00EEFF86 /* User.swift in Sources */,
+				81EE89841E451CEA0049C49C /* PinAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

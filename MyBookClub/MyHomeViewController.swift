@@ -7,6 +7,8 @@
 //
 import CoreFoundation
 import UIKit
+import IQKeyboardManagerSwift
+
 
 class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate {
     
@@ -28,6 +30,7 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     let buttonBorder = UIColor.white.cgColor
     let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var profilePhotoImageView: UIImageView!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var share: UIButton!
@@ -167,8 +170,12 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
-    
+
     @IBAction func logoutButtonPressed(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func saveBookRead(_ sender: UIButton) {
         
     }
 
@@ -184,29 +191,81 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         return true
     }
     
-    func customButtons() {
-        
-    logout.layer.borderColor = buttonBorder
-    logout.layer.backgroundColor  = buttonColor
-    logout.layer.borderWidth = 1
-    logout.layer.cornerRadius = 10
+//    //MARK:   KEYBOARD NOTIFICATION/SCROLLING
+//    
+//    func registerForKeyboardNotifications() {
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+//    
+//    }
+//    
+//    func deregisterFromKeyboardNotifications(){
+//        //Removing notifies on keyboard appearing
+//        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+//    }
+//
+//    
+//    func keyboardWasShown(notification:NSNotification) {
+//        self.scrollView.isScrollEnabled = true
+//        var info = notification.userInfo!
+//        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
+//        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize!.height, 0.0)
+//        
+//        self.scrollView.contentInset = contentInsets
+//        self.scrollView.scrollIndicatorInsets = contentInsets
+//        var aRect : CGRect = self.view.frame
+//        aRect.size.height -= (keyboardSize?.height)!
+//        
+//        if let addTitleOfBookRead = self.addTitleOfBookRead {
+//            if (aRect.contains(addTitleOfBookRead.frame.origin)) {
+//                self.scrollView.scrollRectToVisible(addTitleOfBookRead.frame, animated: true)
+//            }
+//        }
+//    }
+//    
+//    func keyboardWillBeHidden(notification: NSNotification){
+//        //Once keyboard disappears, restore original positions
+//        var info = notification.userInfo!
+//        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
+//        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, -keyboardSize!.height, 0.0)
+//        self.scrollView.contentInset = contentInsets
+//        self.scrollView.scrollIndicatorInsets = contentInsets
+//        self.view.endEditing(true)
+//        self.scrollView.isScrollEnabled = false
+//    }
+//    
+//    func textFieldDidBeginEditing(_ textField: UITextField){
+//        activeField = textField
+//    }
+//    
+//    func textFieldDidEndEditing(_ textField: UITextField){
+//        activeField = nil
+//    }
     
-    share.layer.borderColor = buttonBorder
-    share.layer.backgroundColor  = buttonColor
-    share.layer.borderWidth = 1
-    share.layer.cornerRadius = 10
+    func customButtons() {
+        logout.layer.borderColor = buttonBorder
+        logout.layer.backgroundColor  = buttonColor
+        logout.layer.borderWidth = 1
+        logout.layer.cornerRadius = 10
         
-    addButton.layer.borderColor = buttonBorder
-    addButton.layer.backgroundColor  = buttonColor
-    addButton.layer.borderWidth = 1
-    addButton.layer.cornerRadius = 10
+        share.layer.borderColor = buttonBorder
+        share.layer.backgroundColor  = buttonColor
+        share.layer.borderWidth = 1
+        share.layer.cornerRadius = 10
+            
+        addButton.layer.borderColor = buttonBorder
+        addButton.layer.backgroundColor  = buttonColor
+        addButton.layer.borderWidth = 1
+        addButton.layer.cornerRadius = 10
 
-    saveMemberName.layer.borderColor = buttonBorder
-    saveMemberName.layer.backgroundColor  = buttonColor
-    saveMemberName.layer.borderWidth = 1
-    saveMemberName.layer.cornerRadius = 10
+        saveMemberName.layer.borderColor = buttonBorder
+        saveMemberName.layer.backgroundColor  = buttonColor
+        saveMemberName.layer.borderWidth = 1
+        saveMemberName.layer.cornerRadius = 10
     }
 }
+
 
 
 
