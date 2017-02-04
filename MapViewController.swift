@@ -33,7 +33,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.02, 0.02)
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.008, 0.008)
         
         let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
@@ -42,7 +42,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView.addAnnotation(pin)
         
         mapView.setRegion(region, animated: true)
-        mapView.mapType = MKMapType.satellite
+        mapView.mapType = MKMapType.standard
             print(location.altitude)
             print(location.speed)
         
