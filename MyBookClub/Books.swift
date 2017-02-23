@@ -1,5 +1,5 @@
 //
-//  BookModal.swift
+//  Books.swift
 //  Book Club
 //
 //  Created by Cynthia Whitlatch on 10/8/15.

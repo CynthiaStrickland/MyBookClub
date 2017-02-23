@@ -129,19 +129,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gck-OD-cAG">
-                                <rect key="frame" x="249" y="252" width="115" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="115" id="xIu-J1-I6g"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="12"/>
-                                <state key="normal" title="Forgot Password">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="JyK-oz-80E" kind="show" identifier="password" id="aq8-4w-qFT"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="MPA-4r-Rax">
                                 <rect key="frame" x="20" y="227" width="344" height="30"/>
                                 <constraints>
@@ -160,7 +147,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bq7-sL-hhg">
-                                <rect key="frame" x="42" y="311" width="143" height="65"/>
+                                <rect key="frame" x="117" y="320" width="143" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="Lol-9L-rA5"/>
                                 </constraints>
@@ -173,39 +160,52 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HnJ-GP-rBM" userLabel="Register Button">
-                                <rect key="frame" x="198" y="311" width="143" height="65"/>
+                                <rect key="frame" x="116" y="438" width="143" height="65"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="RegisterButtonPressed:" destination="Stu-17-Eic" eventType="touchUpInside" id="zr2-4G-Kcx"/>
+                                    <action selector="registerButtonPressed:" destination="Stu-17-Eic" eventType="touchUpInside" id="hSC-Ri-9OU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gck-OD-cAG">
+                                <rect key="frame" x="249" y="193" width="115" height="157"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="xIu-J1-I6g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="12"/>
+                                <state key="normal" title="Forgot Password">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JyK-oz-80E" kind="show" identifier="password" id="aq8-4w-qFT"/>
                                 </connections>
                             </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="2ph-gg-7lr" firstAttribute="centerX" secondItem="tGT-wa-H7G" secondAttribute="centerX" id="0fn-pc-BPG"/>
                             <constraint firstItem="gck-OD-cAG" firstAttribute="trailing" secondItem="tGT-wa-H7G" secondAttribute="trailing" id="4MH-fE-CQS"/>
-                            <constraint firstItem="Bq7-sL-hhg" firstAttribute="top" secondItem="HnJ-GP-rBM" secondAttribute="top" id="5ng-gJ-Gxe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HnJ-GP-rBM" secondAttribute="trailing" constant="18" id="Aud-lL-l4C"/>
-                            <constraint firstItem="2ph-gg-7lr" firstAttribute="centerY" secondItem="Bq7-sL-hhg" secondAttribute="centerY" id="D7t-mI-TYt"/>
-                            <constraint firstItem="HnJ-GP-rBM" firstAttribute="leading" secondItem="Bq7-sL-hhg" secondAttribute="trailing" constant="13" id="Eja-rF-8Mb"/>
+                            <constraint firstItem="Bq7-sL-hhg" firstAttribute="top" secondItem="HnJ-GP-rBM" secondAttribute="top" constant="-118" id="5ng-gJ-Gxe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HnJ-GP-rBM" secondAttribute="trailing" constant="100" id="Aud-lL-l4C"/>
+                            <constraint firstItem="2ph-gg-7lr" firstAttribute="centerY" secondItem="Bq7-sL-hhg" secondAttribute="centerY" constant="-9" id="D7t-mI-TYt"/>
+                            <constraint firstItem="HnJ-GP-rBM" firstAttribute="leading" secondItem="Bq7-sL-hhg" secondAttribute="trailing" constant="-144" id="Eja-rF-8Mb"/>
                             <constraint firstItem="kQA-c0-MML" firstAttribute="top" secondItem="RG6-iE-f4p" secondAttribute="bottom" constant="162" id="HUh-Qp-kDD"/>
                             <constraint firstItem="kQA-c0-MML" firstAttribute="leading" secondItem="MPA-4r-Rax" secondAttribute="leading" id="HuM-EE-blb"/>
-                            <constraint firstItem="HnJ-GP-rBM" firstAttribute="baseline" secondItem="Bq7-sL-hhg" secondAttribute="firstBaseline" id="Hwt-SS-InF"/>
+                            <constraint firstItem="HnJ-GP-rBM" firstAttribute="baseline" secondItem="Bq7-sL-hhg" secondAttribute="firstBaseline" constant="118" id="Hwt-SS-InF"/>
                             <constraint firstItem="MPA-4r-Rax" firstAttribute="trailing" secondItem="gck-OD-cAG" secondAttribute="trailing" id="Ile-rK-jCw"/>
                             <constraint firstItem="kQA-c0-MML" firstAttribute="trailing" secondItem="MPA-4r-Rax" secondAttribute="trailing" id="Kct-GK-CKj"/>
                             <constraint firstItem="2ph-gg-7lr" firstAttribute="bottom" secondItem="iHZ-wv-nai" secondAttribute="top" id="Snw-sh-wng"/>
-                            <constraint firstItem="Bq7-sL-hhg" firstAttribute="baseline" secondItem="HnJ-GP-rBM" secondAttribute="firstBaseline" id="U4t-59-Cx4"/>
-                            <constraint firstItem="HnJ-GP-rBM" firstAttribute="top" secondItem="gck-OD-cAG" secondAttribute="bottom" constant="29" id="ZfB-cw-8oT"/>
+                            <constraint firstItem="Bq7-sL-hhg" firstAttribute="baseline" secondItem="HnJ-GP-rBM" secondAttribute="firstBaseline" constant="-118" id="U4t-59-Cx4"/>
+                            <constraint firstItem="HnJ-GP-rBM" firstAttribute="top" secondItem="gck-OD-cAG" secondAttribute="bottom" constant="88" id="ZfB-cw-8oT"/>
                             <constraint firstItem="2ph-gg-7lr" firstAttribute="top" secondItem="RG6-iE-f4p" secondAttribute="bottom" id="ejy-fv-WAt"/>
                             <constraint firstItem="kQA-c0-MML" firstAttribute="leading" secondItem="i6X-3e-voB" secondAttribute="leadingMargin" constant="4" id="j55-Fu-ors"/>
-                            <constraint firstItem="Bq7-sL-hhg" firstAttribute="leading" secondItem="i6X-3e-voB" secondAttribute="leadingMargin" constant="26" id="jg8-QW-r7i"/>
+                            <constraint firstItem="Bq7-sL-hhg" firstAttribute="leading" secondItem="i6X-3e-voB" secondAttribute="leadingMargin" constant="101" id="jg8-QW-r7i"/>
                             <constraint firstItem="MPA-4r-Rax" firstAttribute="top" secondItem="kQA-c0-MML" secondAttribute="bottom" constant="15" id="kKd-4i-rRb"/>
                             <constraint firstItem="tGT-wa-H7G" firstAttribute="leading" secondItem="i6X-3e-voB" secondAttribute="leadingMargin" constant="-4" id="pJg-iu-1Ux"/>
-                            <constraint firstItem="Bq7-sL-hhg" firstAttribute="top" secondItem="MPA-4r-Rax" secondAttribute="bottom" constant="54" id="qm5-Cw-0nN"/>
+                            <constraint firstItem="Bq7-sL-hhg" firstAttribute="top" secondItem="MPA-4r-Rax" secondAttribute="bottom" constant="63" id="qm5-Cw-0nN"/>
                             <constraint firstAttribute="trailing" secondItem="2ph-gg-7lr" secondAttribute="trailing" id="qyU-LT-DcH"/>
-                            <constraint firstItem="gck-OD-cAG" firstAttribute="top" secondItem="kQA-c0-MML" secondAttribute="bottom" constant="40" id="uCb-EA-WZq"/>
+                            <constraint firstItem="gck-OD-cAG" firstAttribute="top" secondItem="kQA-c0-MML" secondAttribute="bottom" constant="-19" id="uCb-EA-WZq"/>
                             <constraint firstItem="2ph-gg-7lr" firstAttribute="leading" secondItem="i6X-3e-voB" secondAttribute="leading" id="z45-EX-9wc"/>
                             <constraint firstItem="iHZ-wv-nai" firstAttribute="top" secondItem="tGT-wa-H7G" secondAttribute="bottom" constant="105" id="zgk-Bt-2RQ"/>
                         </constraints>

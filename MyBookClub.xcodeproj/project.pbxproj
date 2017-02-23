@@ -43,6 +43,7 @@
 		81C6E0481E3D38BA00EEFF86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E0471E3D38BA00EEFF86 /* LoginViewController.swift */; };
 		81C6E04A1E3D38D000EEFF86 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E0491E3D38D000EEFF86 /* PasswordResetViewController.swift */; };
 		81C6E04E1E3D614200EEFF86 /* MyHomeTableviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E04D1E3D614200EEFF86 /* MyHomeTableviewCell.swift */; };
+		81C7E9171E5F918400AF5432 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7E9161E5F918400AF5432 /* Member.swift */; };
 		81EE89841E451CEA0049C49C /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EE89831E451CEA0049C49C /* PinAnnotation.swift */; };
 		C8B4DA9B69D97AC369359897 /* Pods_MyBookClubUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D5D41BA41B4F307FF5F979 /* Pods_MyBookClubUITests.framework */; };
 		D31ADF3B9EBFD6B7C8646248 /* Pods_MyBookClubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880C7DED4462D8D3CC45F527 /* Pods_MyBookClubTests.framework */; };
@@ -112,6 +113,7 @@
 		81C6E0471E3D38BA00EEFF86 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		81C6E0491E3D38D000EEFF86 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		81C6E04D1E3D614200EEFF86 /* MyHomeTableviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHomeTableviewCell.swift; sourceTree = "<group>"; };
+		81C7E9161E5F918400AF5432 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		81EE89831E451CEA0049C49C /* PinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 		81FC2BE41E417516008DDD38 /* CarrierBundleUtilities.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = CarrierBundleUtilities.tbd; path = usr/lib/CarrierBundleUtilities.tbd; sourceTree = SDKROOT; };
 		880C7DED4462D8D3CC45F527 /* Pods_MyBookClubTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBookClubTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +264,7 @@
 				81EE89831E451CEA0049C49C /* PinAnnotation.swift */,
 				81C6E0311E3D352B00EEFF86 /* User.swift */,
 				81C6E02C1E3D352B00EEFF86 /* Books.swift */,
+				81C7E9161E5F918400AF5432 /* Member.swift */,
 			);
 			name = MODALS;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				81C6E0401E3D353400EEFF86 /* AboutViewController.swift in Sources */,
 				81C6E03C1E3D352B00EEFF86 /* User.swift in Sources */,
 				81EE89841E451CEA0049C49C /* PinAnnotation.swift in Sources */,
+				81C7E9171E5F918400AF5432 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

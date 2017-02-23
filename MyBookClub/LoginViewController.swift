@@ -19,8 +19,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     let buttonBorder = UIColor.white.cgColor
     let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor
-
-
+    
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var userEmailTextField: UITextField!
@@ -28,19 +27,28 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         customButtons()
+        checkIsUserLoggedIn()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         customButtons()
-        loginViewControllerHandlers()
     }
     
     @IBAction func loginButtonPressed(_ sender: AnyObject) {
         handleLogin()
     }
     
-    fileprivate func registerUserIntoDatabaseWithUID(_ uid: String, values: [String: AnyObject]) {
+    @IBAction func registerButtonPressed(_ sender: UIButton) {
+        handleRegister()
+    }
+    
+    func checkIsUserLoggedIn() {
+        
+    }
+    
+    func registerUserIntoDatabaseWithUID(_ uid: String, values: [String: AnyObject]) {
         let ref = FIRDatabase.database().reference(fromURL: "https://my-book-club-d479c.firebaseio.com/")
         let usersReference = ref.child("users").child(uid)
         usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
@@ -61,17 +69,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    lazy var profileImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "me")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFit
-        
-        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSelectProfileImageView)))
-        imageView.isUserInteractionEnabled = true
-        
-        return imageView
-    }()
+//    lazy var profileImageView: UIImageView = {
+//        let imageView = UIImageView()
+//        imageView.image = UIImage(named: "me")
+//        imageView.translatesAutoresizingMaskIntoConstraints = false
+//        imageView.contentMode = .scaleAspectFit
+//        
+//        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSelectProfileImageView)))
+//        imageView.isUserInteractionEnabled = true
+//        
+//        return imageView
+//    }()
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
