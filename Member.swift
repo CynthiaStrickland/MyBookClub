@@ -12,13 +12,15 @@ class Member {
     let memberFirstName: String?
     let memberLastName: String?
     let memberEmail: String?
+    let memberProfileImage: UIImageView?
     let memberAdmin: Bool?
     let memberApproved: Bool?
     
-    init(memberFirstName: String, memberLastName: String, memberEmail: String, memberAdmin: Bool, memberApproved: Bool) {
+    init(memberFirstName: String, memberLastName: String, memberEmail: String, memberProfileImage: UIImageView, memberAdmin: Bool, memberApproved: Bool) {
         self.memberFirstName = memberFirstName
         self.memberLastName = memberLastName
         self.memberEmail = memberEmail
+        self.memberProfileImage = memberProfileImage
         self.memberAdmin = memberAdmin
         self.memberApproved = memberApproved
     }

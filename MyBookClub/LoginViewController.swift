@@ -19,11 +19,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     let buttonBorder = UIColor.white.cgColor
     let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor
-    
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var registerButton: UIButton!
+        
+    @IBOutlet weak var enterButtonPressed: UIButton!
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
+    @IBOutlet weak var loginRegisterControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +38,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func loginButtonPressed(_ sender: AnyObject) {
         handleLogin()
-    }
-    
-    @IBAction func registerButtonPressed(_ sender: UIButton) {
-        handleRegister()
     }
     
     func checkIsUserLoggedIn() {
@@ -96,15 +92,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         userPasswordTextField.layer.borderWidth = 1
         userPasswordTextField.layer.cornerRadius = 10
         
-        loginButton.layer.borderColor = buttonBorder
-        loginButton.layer.backgroundColor  = buttonColor
-        loginButton.layer.borderWidth = 1
-        loginButton.layer.cornerRadius = 10
+        enterButtonPressed.layer.borderColor = buttonBorder
+        enterButtonPressed.layer.backgroundColor  = buttonColor
+        enterButtonPressed.layer.borderWidth = 1
+        enterButtonPressed.layer.cornerRadius = 10
         
-        registerButton.layer.borderColor = buttonBorder
-        registerButton.layer.backgroundColor  = buttonColor
-        registerButton.layer.borderWidth = 1
-        registerButton.layer.cornerRadius = 10
+        loginRegisterControl.layer.borderColor = buttonBorder
+        loginRegisterControl.layer.backgroundColor  = buttonColor
+        loginRegisterControl.layer.borderWidth = 1
+        loginRegisterControl.layer.cornerRadius = 10
+
     }
 }
 

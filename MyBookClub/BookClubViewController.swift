@@ -10,7 +10,7 @@ import UIKit
 
 class BookClubViewController: UIViewController, UITableViewDataSource {
     
-    var user = [User]()
+    var members = [Member]()
 
     let buttonBorder = UIColor.white.cgColor
     let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor
@@ -48,7 +48,7 @@ class BookClubViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return user.count
+        return members.count
         
     }
     

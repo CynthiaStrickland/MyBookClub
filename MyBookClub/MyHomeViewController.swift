@@ -23,7 +23,7 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     var imagePicked = 0
     
     var booksRead = [Books]()
-    var users = [User]()
+    var members = [Member]()
 
     var bookauthorDictionary = [String:String]()
 
@@ -176,6 +176,12 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
     
     @IBAction func saveBookRead(_ sender: UIButton) {
+ //       addTitleOfBookRead
+//        addAuthorOfBookRead
+        //bookauthorDictionary
+        
+        
+        
         
     }
 

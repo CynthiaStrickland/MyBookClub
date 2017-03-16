@@ -12,7 +12,7 @@ import MapKit
 
 class AboutViewController: UIViewController {
 
-    var clubInfo = [User]()
+    var clubInfo = [Member]()
 
     let buttonBorder = UIColor.white.cgColor
     let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor

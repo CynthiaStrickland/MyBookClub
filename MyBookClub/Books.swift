@@ -15,11 +15,6 @@ class Books: NSObject {
     var titleOfBook : String?
     var authorOfBook : String?
     var bookImage: UIImage?
-
-    var dateBookRead : String?
-    var bookRating: String?
-    var bookSuggestions: String?
-    var bookClubNotes: String?
 }
 
 class Club: NSObject {
@@ -29,5 +24,10 @@ class Club: NSObject {
     var clubname: String?
     var clubBooksReadTitle: String?
     var clubBooksReadAuthor: String?
+    
+    var dateBookRead : String?
+    var bookRating: String?
+    var bookSuggestions: String?
+    var bookClubNotes: String?
     
 }

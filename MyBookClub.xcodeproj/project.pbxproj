@@ -36,7 +36,6 @@
 		81C6E0391E3D352B00EEFF86 /* CreateBookClub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E02E1E3D352B00EEFF86 /* CreateBookClub.swift */; };
 		81C6E03A1E3D352B00EEFF86 /* MyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E02F1E3D352B00EEFF86 /* MyHomeViewController.swift */; };
 		81C6E03B1E3D352B00EEFF86 /* SearchClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E0301E3D352B00EEFF86 /* SearchClubViewController.swift */; };
-		81C6E03C1E3D352B00EEFF86 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E0311E3D352B00EEFF86 /* User.swift */; };
 		81C6E03D1E3D352B00EEFF86 /* UserBookNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E0321E3D352B00EEFF86 /* UserBookNotes.swift */; };
 		81C6E0401E3D353400EEFF86 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C6E03E1E3D353400EEFF86 /* AboutViewController.swift */; };
 		81C6E0431E3D354900EEFF86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C6E0421E3D354900EEFF86 /* Main.storyboard */; };
@@ -106,7 +105,6 @@
 		81C6E02E1E3D352B00EEFF86 /* CreateBookClub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateBookClub.swift; sourceTree = "<group>"; };
 		81C6E02F1E3D352B00EEFF86 /* MyHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHomeViewController.swift; sourceTree = "<group>"; };
 		81C6E0301E3D352B00EEFF86 /* SearchClubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchClubViewController.swift; sourceTree = "<group>"; };
-		81C6E0311E3D352B00EEFF86 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = MyBookClub/User.swift; sourceTree = "<group>"; };
 		81C6E0321E3D352B00EEFF86 /* UserBookNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBookNotes.swift; sourceTree = "<group>"; };
 		81C6E03E1E3D353400EEFF86 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		81C6E0421E3D354900EEFF86 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = MyBookClub/Main.storyboard; sourceTree = "<group>"; };
@@ -262,7 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				81EE89831E451CEA0049C49C /* PinAnnotation.swift */,
-				81C6E0311E3D352B00EEFF86 /* User.swift */,
 				81C6E02C1E3D352B00EEFF86 /* Books.swift */,
 				81C7E9161E5F918400AF5432 /* Member.swift */,
 			);
@@ -598,7 +595,6 @@
 				81C6E03A1E3D352B00EEFF86 /* MyHomeViewController.swift in Sources */,
 				81C6E0381E3D352B00EEFF86 /* BuyBookViewcontrollerViewController.swift in Sources */,
 				81C6E0401E3D353400EEFF86 /* AboutViewController.swift in Sources */,
-				81C6E03C1E3D352B00EEFF86 /* User.swift in Sources */,
 				81EE89841E451CEA0049C49C /* PinAnnotation.swift in Sources */,
 				81C7E9171E5F918400AF5432 /* Member.swift in Sources */,
 			);
