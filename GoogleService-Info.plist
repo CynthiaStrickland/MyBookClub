@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>270287947176-vsndgrk03pttj7iokgui3qk3mt1e0sqp.apps.googleusercontent.com</string>
+	<string>886332357270-utep9bo3g629j27e6oo9hqql877v3g2a.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.270287947176-vsndgrk03pttj7iokgui3qk3mt1e0sqp</string>
+	<string>com.googleusercontent.apps.886332357270-utep9bo3g629j27e6oo9hqql877v3g2a</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBQAqnAyWURUAjHnmmZmt8hQxYdg2y2A4E</string>
+	<string>AIzaSyBRYmgqMcgSjhOm8c2NDBmU8fw8mG-PLdw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>270287947176</string>
+	<string>886332357270</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.mybookclub.ios</string>
+	<string>com.FenixDesignz.MyBookClub</string>
 	<key>PROJECT_ID</key>
-	<string>my-book-club-56f29</string>
+	<string>my-book-club-d479c</string>
 	<key>STORAGE_BUCKET</key>
-	<string>my-book-club-56f29.appspot.com</string>
+	<string>my-book-club-d479c.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:270287947176:ios:46b54bee8a6216e2</string>
+	<string>1:886332357270:ios:b575ab2fc4e74c37</string>
 	<key>DATABASE_URL</key>
-	<string>https://my-book-club-56f29.firebaseio.com</string>
+	<string>https://my-book-club-d479c.firebaseio.com</string>
 </dict>
 </plist>

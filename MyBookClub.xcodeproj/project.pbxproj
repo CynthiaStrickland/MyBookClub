@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		13A9AAEF705324A98777EB0C /* Pods_MyBookClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D52B481D67DB44CBAE9ABF /* Pods_MyBookClub.framework */; };
-		812E74BA1E47BAD500A3413A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 812E74B91E47BAD500A3413A /* GoogleService-Info.plist */; };
 		8155FFDF1E41A165001595E3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8155FFDE1E41A165001595E3 /* CoreTelephony.framework */; };
+		8158519C1E7B737000A98EB2 /* backgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8158519B1E7B737000A98EB2 /* backgroundImage.png */; };
+		815851BC1E7CF1F100A98EB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 815851BB1E7CF1F100A98EB2 /* GoogleService-Info.plist */; };
 		816C75891E43C370007BDC08 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 816C75881E43C370007BDC08 /* MetalKit.framework */; };
 		816C758B1E43C84E007BDC08 /* me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 816C758A1E43C84E007BDC08 /* me@2x.png */; };
 		816C758D1E43C925007BDC08 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816C758C1E43C925007BDC08 /* MapViewController.swift */; };
@@ -70,8 +71,9 @@
 		4F65B337D48293BA0189D986 /* Pods-MyBookClubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBookClubTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBookClubTests/Pods-MyBookClubTests.release.xcconfig"; sourceTree = "<group>"; };
 		50CBB65FF9249A314F6F4F23 /* Pods-MyBookClubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBookClubTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBookClubTests/Pods-MyBookClubTests.debug.xcconfig"; sourceTree = "<group>"; };
 		72D5D41BA41B4F307FF5F979 /* Pods_MyBookClubUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBookClubUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		812E74B91E47BAD500A3413A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8155FFDE1E41A165001595E3 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		8158519B1E7B737000A98EB2 /* backgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundImage.png; sourceTree = "<group>"; };
+		815851BB1E7CF1F100A98EB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		816C75841E43C10C007BDC08 /* MyBookClub-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyBookClub-Bridging-Header.h"; sourceTree = "<group>"; };
 		816C75881E43C370007BDC08 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		816C758A1E43C84E007BDC08 /* me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me@2x.png"; sourceTree = "<group>"; };
@@ -190,12 +192,12 @@
 		81C6DFDE1E3D34A400EEFF86 = {
 			isa = PBXGroup;
 			children = (
-				812E74B91E47BAD500A3413A /* GoogleService-Info.plist */,
 				81C6DFF61E3D34A400EEFF86 /* Info.plist */,
+				815851BB1E7CF1F100A98EB2 /* GoogleService-Info.plist */,
 				81C6DFEA1E3D34A400EEFF86 /* AppDelegate.swift */,
+				81C6DFE91E3D34A400EEFF86 /* CONTROLLERS */,
 				81C6E0451E3D37CC00EEFF86 /* VIEWS */,
 				81C6E0441E3D37C200EEFF86 /* MODALS */,
-				81C6DFE91E3D34A400EEFF86 /* CONTROLLERS */,
 				81C6E0461E3D37D700EEFF86 /* SUPPORTING */,
 				81C6DFFE1E3D34A400EEFF86 /* MyBookClubTests */,
 				81C6E0091E3D34A400EEFF86 /* MyBookClubUITests */,
@@ -278,6 +280,7 @@
 		81C6E0461E3D37D700EEFF86 /* SUPPORTING */ = {
 			isa = PBXGroup;
 			children = (
+				8158519B1E7B737000A98EB2 /* backgroundImage.png */,
 				816C75841E43C10C007BDC08 /* MyBookClub-Bridging-Header.h */,
 				816C758A1E43C84E007BDC08 /* me@2x.png */,
 				81C6DFF11E3D34A400EEFF86 /* Assets.xcassets */,
@@ -411,11 +414,12 @@
 				81C6DFF51E3D34A400EEFF86 /* LaunchScreen.storyboard in Resources */,
 				81C6E01F1E3D34E900EEFF86 /* home30.png in Resources */,
 				81C6DFF21E3D34A400EEFF86 /* Assets.xcassets in Resources */,
+				8158519C1E7B737000A98EB2 /* backgroundImage.png in Resources */,
+				815851BC1E7CF1F100A98EB2 /* GoogleService-Info.plist in Resources */,
 				81C6E0431E3D354900EEFF86 /* Main.storyboard in Resources */,
 				81C6E01D1E3D34DC00EEFF86 /* BC30.png in Resources */,
 				81C6E01B1E3D34CF00EEFF86 /* backgroundImage.png in Resources */,
 				816C758B1E43C84E007BDC08 /* me@2x.png in Resources */,
-				812E74BA1E47BAD500A3413A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

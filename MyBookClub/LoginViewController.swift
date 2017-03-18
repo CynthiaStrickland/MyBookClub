@@ -8,8 +8,6 @@
 
 
 import UIKit
-import LBTAComponents
-
 import Firebase
 import FirebaseAuth
 import FirebaseCore
@@ -19,44 +17,50 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     let buttonBorder = UIColor.white.cgColor
     let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor
-        
+    
     @IBOutlet weak var enterButtonPressed: UIButton!
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
     @IBOutlet weak var loginRegisterControl: UISegmentedControl!
     
+    @IBAction func forgotPasswordPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "password", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         customButtons()
-        checkIsUserLoggedIn()
+//        checkIsUserLoggedIn()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         customButtons()
     }
     
-    @IBAction func loginButtonPressed(_ sender: AnyObject) {
+    @IBAction func enterButtonPressed(_ sender: AnyObject) {
         handleLogin()
+        print("Enter Button Pressed")
     }
     
-    func checkIsUserLoggedIn() {
-        
-    }
+//    func checkIsUserLoggedIn() {
+//        if FIRAuth.auth()?.currentUser != nil {
+//            //segue to HomeViewController
+//        }
+//    }
     
-    func registerUserIntoDatabaseWithUID(_ uid: String, values: [String: AnyObject]) {
-        let ref = FIRDatabase.database().reference(fromURL: "https://my-book-club-d479c.firebaseio.com/")
-        let usersReference = ref.child("users").child(uid)
-        usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
-            
-            if err != nil {
-                print(err!)
-                return
-            }
-            
-            self.dismiss(animated: true, completion: nil)
-        })
-    }
+//    func registerUserIntoDatabaseWithUID(_ uid: String, values: [String: AnyObject]) {
+//        let ref = FIRDatabase.database().reference(fromURL: "https://my-book-club-d479c.firebaseio.com/")
+//        let usersReference = ref.child("users").child(uid)
+//        usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
+//            
+//            if err != nil {
+//                print(err!)
+//                return
+//            }
+//            
+//            self.dismiss(animated: true, completion: nil)
+//        })
+//    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         userEmailTextField.resignFirstResponder()

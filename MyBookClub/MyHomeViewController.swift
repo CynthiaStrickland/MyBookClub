@@ -8,6 +8,8 @@
 import CoreFoundation
 import UIKit
 import IQKeyboardManagerSwift
+import FirebaseAuth
+
 
 
 class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate {
@@ -93,7 +95,6 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
             } else if imagePicked == 0 {
                 addBookReadImageView.image = pickedImage
             }
-            dismiss(animated: true, completion: nil)
         
         if let selectedImage = pickedImage {
             profilePhotoImageView.image = selectedImage
@@ -172,17 +173,16 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
 
     @IBAction func logoutButtonPressed(_ sender: UIButton) {
-        
+        try! FIRAuth.auth()?.signOut()
+        dismiss(animated: true, completion: nil)
+
     }
     
     @IBAction func saveBookRead(_ sender: UIButton) {
  //       addTitleOfBookRead
 //        addAuthorOfBookRead
         //bookauthorDictionary
-        
-        
-        
-        
+    
     }
 
     @IBAction func shareButtonPressed(_ sender: UIButton) {

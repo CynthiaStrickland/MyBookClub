@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICx-lf-vKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4325.6000000000004" y="421.43928035982015"/>
+            <point key="canvasLocation" x="3503" y="601"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="SWA-ig-fLL">
@@ -147,7 +147,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButtonPressed:" destination="Stu-17-Eic" eventType="touchUpInside" id="ewX-Y1-q72"/>
+                                    <action selector="enterButtonPressed:" destination="Stu-17-Eic" eventType="touchUpInside" id="Isi-TG-fYU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gck-OD-cAG">
@@ -158,6 +158,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="forgotPasswordPressed:" destination="Stu-17-Eic" eventType="touchUpInside" id="zV7-GQ-88w"/>
                                     <segue destination="JyK-oz-80E" kind="show" identifier="password" id="aq8-4w-qFT"/>
                                 </connections>
                             </button>
@@ -169,24 +170,21 @@
                                     <segment title="REGISTER"/>
                                 </segments>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="loginRegisterControl:" destination="Stu-17-Eic" eventType="valueChanged" id="zAs-qf-zq0"/>
-                                </connections>
                             </segmentedControl>
                         </subviews>
                     </view>
                     <navigationItem key="navigationItem" id="bh3-FC-g3C"/>
                     <connections>
-                        <outlet property="enterButtonPressed" destination="Bq7-sL-hhg" id="c0R-HD-S2N"/>
-                        <outlet property="loginButton" destination="Bq7-sL-hhg" id="DkR-H3-rh2"/>
-                        <outlet property="loginRegisterControl" destination="gBE-Jj-qUx" id="Hvr-3s-pMv"/>
+                        <outlet property="enterButtonPressed" destination="Bq7-sL-hhg" id="v3u-El-WBg"/>
+                        <outlet property="loginRegisterControl" destination="gBE-Jj-qUx" id="xf1-VH-asR"/>
                         <outlet property="userEmailTextField" destination="kQA-c0-MML" id="sDG-Ju-7kh"/>
                         <outlet property="userPasswordTextField" destination="MPA-4r-Rax" id="JyF-rc-jmr"/>
+                        <segue destination="Ynd-g5-KwV" kind="show" identifier="tab" id="KXP-1c-jOU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LGU-b5-o3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3629.5999999999999" y="420.53973013493254"/>
+            <point key="canvasLocation" x="4380" y="422"/>
         </scene>
         <!--MyHomeViewController-->
         <scene sceneID="idL-6r-0dm">
@@ -289,6 +287,9 @@
                                                 <state key="normal" title="LOGOUT">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="logoutButtonPressed:" destination="Yxh-Ng-vPd" eventType="touchUpInside" id="nY3-Oi-gHy"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Authors Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tBA-8W-jiI" userLabel="Authors Name">
                                                 <rect key="frame" x="98" y="519" width="258" height="30"/>
