@@ -12,7 +12,7 @@ import FirebaseAuth
 
 
 
-class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate {
+class MyHomeViewController: UICollectionViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate {
     
     var titleOfBook : String?
     var authorOfBook : String?
@@ -32,6 +32,8 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     let buttonBorder = UIColor.white.cgColor
     let buttonColor = UIColor(red: 40/255, green: 141/255, blue: 255/255, alpha: 0.5).cgColor
 
+    //MARK:  OUTLETS
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var profilePhotoImageView: UIImageView!
     @IBOutlet weak var addButton: UIButton!
@@ -65,7 +67,7 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         memberName.text = userDefaults.object(forKey: "MyMemberName") as? String
     }
     
-            //MARK :   PROFILE PICTURE SELECTION
+    //MARK:   PROFILE PICTURE SELECTION
     @IBAction func selectProfilePhoto(_ sender: AnyObject) {
         let myPickerController = UIImagePickerController()
         myPickerController.delegate = self
@@ -136,14 +138,17 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         userDefaults.setValue(memberName.text, forKey: "MyMemberName")
         userDefaults.synchronize()
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return booksRead.count
-        
+    //MARK: CUSTOM COLLECTION VIEW
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "booksread", for: indexPath)
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return booksRead.count
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell : UITableViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "booksread", for: indexPath)
         
         let myBooksRead = booksRead[indexPath.row]
         
@@ -154,24 +159,30 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let mainStoryboard : UIStoryboard = UIStoryboard(name: "MyHomeViewController", bundle: nil)
-        let homeViewController : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "UserBookNotes")
-        self.present(homeViewController, animated: true, completion: nil)
+    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return true
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        
-        guard case(.delete) = editingStyle else { return }
-        
-        if editingStyle == .delete {
-            print("Deleted")
-            
-            self.booksRead.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-        }
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let mainStoryboard : UIStoryboard = UIStoryboard(name: "MyHomeViewController", bundle: nil)
+//        let homeViewController : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "UserBookNotes")
+//        self.present(homeViewController, animated: true, completion: nil)
+//    }
+//    
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        
+//        guard case(.delete) = editingStyle else { return }
+//        
+//        if editingStyle == .delete {
+//            print("Deleted")
+//            
+//            self.booksRead.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .automatic)
+//        }
+//    }
 
+    //MARK: LOGOUT
+    
     @IBAction func logoutButtonPressed(_ sender: UIButton) {
         try! FIRAuth.auth()?.signOut()
         dismiss(animated: true, completion: nil)
@@ -196,6 +207,8 @@ class MyHomeViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return true
     }
+    
+    //MARK: CUSTOM BUTTONS
     
     func customButtons() {
         logout.layer.borderColor = buttonBorder
