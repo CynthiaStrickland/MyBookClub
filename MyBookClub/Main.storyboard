@@ -179,11 +179,12 @@
                         <outlet property="loginRegisterControl" destination="gBE-Jj-qUx" id="xf1-VH-asR"/>
                         <outlet property="userEmailTextField" destination="kQA-c0-MML" id="sDG-Ju-7kh"/>
                         <outlet property="userPasswordTextField" destination="MPA-4r-Rax" id="JyF-rc-jmr"/>
+                        <segue destination="Ynd-g5-KwV" kind="show" identifier="tab" id="qdV-cw-MLz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LGU-b5-o3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4290" y="422"/>
+            <point key="canvasLocation" x="3377" y="422"/>
         </scene>
         <!--MyHomeViewController-->
         <scene sceneID="idL-6r-0dm">
